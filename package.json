@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/faraz412/acceptable-straw-3421/issues"
   },
-  "homepage": "https://github.com/faraz412/acceptable-straw-3421#readme"
+  "homepage": "https://github.com/faraz412/acceptable-straw-3421#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.2",
+    "socket.io": "^4.6.0"
+  }
 }

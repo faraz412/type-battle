@@ -8,6 +8,7 @@ const userrouter = require("./router/userrouter")
 const adminrouter = require("./router/adminrouter")
 app.use(cors())
 app.use(express.json())
+console.log(process.env.PORT)
 
 app.get("/",(req,res)=>{
     app.use(express.static(path.join(__dirname,"client","dist")))
@@ -18,7 +19,7 @@ app.get("/api",(req,res)=>{
     res.send({"msg":"welcome"})
 })
 app.use("/user",userrouter);
-app.user("/admin",adminrouter);
+app.use("/admin",adminrouter);
 
 app.listen(process.env.PORT,async ()=>{
     try {

@@ -3,8 +3,10 @@ const UserModel = require("../models/user.model");
 require("dotenv").config();
 const redis=require("redis");
 const client=redis.createClient();
-//   client.on('error', err => console.log('Redis Client Error', err));
-//   client.connect();
+client.on("error",(error)=>{
+    console.log(error);
+})
+client.connect();
 const bcrypt=require("bcrypt");
 const jwt=require("jsonwebtoken");
 const userrouter=express.Router();
@@ -70,7 +72,7 @@ try {
 
 userrouter.get("/logout",async(req,res)=>{
     let token=req.headers.authorization;
-//    await client.LPUSH("blacklist",token);
+   await client.SETEX(`${token}`,60*60,"true")
    res.status(200).send({"msg":"logout successfull"});
 })
 

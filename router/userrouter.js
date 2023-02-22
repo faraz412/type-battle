@@ -1,16 +1,30 @@
 const express=require("express");
 const UserModel = require("../models/user.model");
 require("dotenv").config();
-const redis=require("redis");
-const client=redis.createClient();
-//   client.on('error', err => console.log('Redis Client Error', err));
-//   client.connect();
+const client=require("../config/redis");
+const otpvalidator=require("../config/mailer")
+var genratedotp;
+client.on("error",(error)=>{
+    console.log(error);
+})
+
+client.connect();
 const bcrypt=require("bcrypt");
 const jwt=require("jsonwebtoken");
 const userrouter=express.Router();
 
 userrouter.get("/",(req,res)=>{
     res.send("user Router")
+})
+
+userrouter.post("/validate",(req,res)=>{
+    let otp=req.body.otp
+    console.log(otp,genratedotp)
+    if(otp==genratedotp){
+      res.status(200).send({"msg":"Otp verified"})
+    }else {
+        res.status(404).send({"msg":"wrong otp"})
+    }
 })
 
 userrouter.post("/register",async(req,res)=>{
@@ -29,6 +43,8 @@ try {
             // console.log(password,hash);
             let data=new UserModel({email,name,"password":hash});
             await data.save();  
+            genratedotp=otpvalidator(email)
+            console.log(genratedotp)
             res.status(200).send({"msg":"done"});
         });
     }
@@ -62,18 +78,11 @@ try {
 }
 })
 
-
-
-
-
-
-
 userrouter.get("/logout",async(req,res)=>{
     let token=req.headers.authorization;
-//    await client.LPUSH("blacklist",token);
+   await client.SETEX(`${token}`,60*60,"true")
    res.status(200).send({"msg":"logout successfull"});
 })
-
 
 
 

@@ -1,6 +1,10 @@
 const express=require("express");
 const UserModel = require("../models/user.model");
-require("dotenv").config()
+require("dotenv").config();
+const redis=require("redis");
+const client=redis.createClient();
+//   client.on('error', err => console.log('Redis Client Error', err));
+//   client.connect();
 const bcrypt=require("bcrypt");
 const jwt=require("jsonwebtoken");
 const userrouter=express.Router();
@@ -45,13 +49,25 @@ try {
             let token=jwt.sign({
                 "email":data1[0].email,"role":data1[0].role
               }, 'typebattle', { expiresIn: '1h' });
-              res.status(200).send({"msg":"login successfull","token":token});
+              res.status(200).send({"msg":"login successfull","token":token,"user":data1});
         });
     }
 } catch (error) {
     console.log(error);
     res.status(404).send({"msg":"error"});
 }
+})
+
+
+
+
+
+
+
+userrouter.get("/logout",async(req,res)=>{
+    let token=req.headers.authorization;
+//    await client.LPUSH("blacklist",token);
+   res.status(200).send({"msg":"logout successfull"});
 })
 
 

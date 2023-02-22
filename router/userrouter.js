@@ -7,6 +7,7 @@ var genratedotp;
 client.on("error",(error)=>{
     console.log(error);
 })
+
 client.connect();
 const bcrypt=require("bcrypt");
 const jwt=require("jsonwebtoken");
@@ -15,6 +16,7 @@ const userrouter=express.Router();
 userrouter.get("/",(req,res)=>{
     res.send("user Router")
 })
+
 userrouter.post("/validate",(req,res)=>{
     let otp=req.body.otp
     console.log(otp,genratedotp)
@@ -24,6 +26,7 @@ userrouter.post("/validate",(req,res)=>{
         res.status(404).send({"msg":"wrong otp"})
     }
 })
+
 userrouter.post("/register",async(req,res)=>{
 let {name,email,password}=req.body;
 // console.log(email,name,password);
@@ -45,7 +48,6 @@ try {
             res.status(200).send({"msg":"done"});
         });
     }
-
 } catch (error) {
     console.log(error);
     res.status(404).send({"msg":"error"})
@@ -76,18 +78,11 @@ try {
 }
 })
 
-
-
-
-
-
-
 userrouter.get("/logout",async(req,res)=>{
     let token=req.headers.authorization;
    await client.SETEX(`${token}`,60*60,"true")
    res.status(200).send({"msg":"logout successfull"});
 })
-
 
 
 

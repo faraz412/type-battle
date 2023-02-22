@@ -1,8 +1,9 @@
 const express=require("express");
 const UserModel = require("../models/user.model");
 require("dotenv").config();
-const redis=require("redis");
-const client=redis.createClient();
+const client=require("../config/redis");
+const otpvalidator=require("../config/mailer")
+var otp
 client.on("error",(error)=>{
     console.log(error);
 })
@@ -31,9 +32,12 @@ try {
             // console.log(password,hash);
             let data=new UserModel({email,name,"password":hash});
             await data.save();  
-            res.status(200).send({"msg":"done"});
+            otp=otpvalidator(email)
+            console.log(otp)
+            res.status(200).send({"msg":"done","otp":otp});
         });
     }
+
 } catch (error) {
     console.log(error);
     res.status(404).send({"msg":"error"})

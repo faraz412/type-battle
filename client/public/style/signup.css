@@ -1,0 +1,50 @@
+#registration h2, #login h2{
+    width: 28%;
+    padding: 50px 0px 17px 0px;
+    margin: auto;
+}
+
+#registration form , #login form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 20px;
+    margin: auto;
+    background-color: #F4EFDF;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 25%);
+    margin-bottom: 80px;
+    font-weight: 500;
+}
+#registration span, #login span{
+    text-align: center;
+    font-weight: 400;
+}
+
+.register_inner_div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.register_inner_div div{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+input,select{
+    padding: 8px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+label{
+    padding: 7px 0px 4px 0px;
+}
+input[type=submit]{
+    background-color: rgb(95, 123, 104);
+    margin-top: 12px;
+    border:none;
+    color: white;
+    font-weight: 500;
+}
+hr{
+    margin: 12px 0;
+}

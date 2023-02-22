@@ -4,6 +4,8 @@ const connection = require("./config/db")
 require("dotenv").config()
 const cors=require("cors")
 const path=require("path")
+const userrouter = require("./router/userrouter")
+const adminrouter = require("./router/adminrouter")
 app.use(cors())
 app.use(express.json())
 
@@ -15,7 +17,8 @@ app.get("/",(req,res)=>{
 app.get("/api",(req,res)=>{
     res.send({"msg":"welcome"})
 })
-
+app.use("/user",userrouter);
+app.user("/admin",adminrouter);
 
 app.listen(process.env.PORT,async ()=>{
     try {

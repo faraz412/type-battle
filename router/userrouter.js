@@ -46,10 +46,14 @@ try {
         res.status(409).send({"msg":"user not exits"})
     }else {
         bcrypt.compare(password, data1[0].password, function(err, result) {
+            if(err){
+                res.status(404).send({"msg":"password incorrect"}) 
+                       }else {
             let token=jwt.sign({
                 "email":data1[0].email,"role":data1[0].role
               }, 'typebattle', { expiresIn: '1h' });
               res.status(200).send({"msg":"login successfull","token":token,"user":data1});
+            }
         });
     }
 } catch (error) {

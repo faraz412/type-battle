@@ -3,7 +3,7 @@ const UserModel = require("../models/user.model");
 require("dotenv").config();
 const client=require("../config/redis");
 const otpvalidator=require("../config/mailer")
-var otp
+var genratedotp;
 client.on("error",(error)=>{
     console.log(error);
 })
@@ -15,7 +15,15 @@ const userrouter=express.Router();
 userrouter.get("/",(req,res)=>{
     res.send("user Router")
 })
-
+userrouter.post("/validate",(req,res)=>{
+    let otp=req.body.otp
+    console.log(otp,genratedotp)
+    if(otp==genratedotp){
+      res.status(200).send({"msg":"Otp verified"})
+    }else {
+        res.status(404).send({"msg":"wrong otp"})
+    }
+})
 userrouter.post("/register",async(req,res)=>{
 let {name,email,password}=req.body;
 // console.log(email,name,password);
@@ -32,9 +40,9 @@ try {
             // console.log(password,hash);
             let data=new UserModel({email,name,"password":hash});
             await data.save();  
-            otp=otpvalidator(email)
-            console.log(otp)
-            res.status(200).send({"msg":"done","otp":otp});
+            genratedotp=otpvalidator(email)
+            console.log(genratedotp)
+            res.status(200).send({"msg":"done"});
         });
     }
 

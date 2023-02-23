@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+.registration h2, #login h2{
+    width: 28%;
+    padding: 50px 0px 17px 0px;
+    margin: auto;
+}
+
+.registration form , #login form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 20px;
+    margin: auto;
+    background-color: #F4EFDF;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 25%);
+    margin-bottom: 80px;
+    font-weight: 500;
+}
+.registration span, #login span{
+    text-align: center;
+    font-weight: 400;
+}
+
+.register_inner_div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.register_inner_div div{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+input,select{
+    padding: 8px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+label{
+    padding: 7px 0px 4px 0px;
+}
+input[type=submit]{
+    background-color: rgb(95, 123, 104);
+    margin-top: 12px;
+    border:none;
+    color: white;
+    font-weight: 500;
+}
+hr{
+    margin: 12px 0;
+}
+
+#leaderboard{
+    /* border:1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    width:75rem;
+    margin:30px auto;
+    padding-top:10px;
+    padding-bottom:30px;
+}
+#leaderboard>h1{
+    text-align: center;
+    margin:20px auto;
+    color: #005894;
+    text-decoration: underline;
+}
+#leaderboard-menu{
+    /* border:1px solid blue; */
+    display: flex;
+    justify-content: space-around;
+}
+#leaderboard-menu>div{
+    /* border:1px solid red; */
+    width:14rem;
+    text-align: center;
+    background-color: #005894;
+    border: 1px solid white;
+    color:white;
+    padding:10px 0;
+    border-radius: 10px;
+    transition: background-color 1s;
+    transition: color 1s;
+}
+#leaderboard-menu>div:hover{
+    cursor: pointer;
+    color: #005894;
+    background-color: white;
+    border: 1px solid #005894;
+}
+#leaderboard-menu>div:active {
+    box-shadow: 0 1px #005894;
+    transform: translateY(1px);
+}
+#leaderboard-body{
+    /* border:1px solid red; */
+    width: 70rem;
+    margin:auto;
+    margin-top:20px;
+}
+#leaderboard-body>div{
+    /* border:1px solid black; */
+    width: 70rem;
+}
+#leaderboard-body table{
+    width:70rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 7px;
+    overflow: hidden;
+    text-align: center;
+}
+#leaderboard-body tr{
+    height:30px;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    /* border-bottom: 1px solid #4c9fd7; */
+}
+#leaderboard-body th{
+    color:white;
+    background-color: #005894;
+    /* border-bottom: 1px solid #4c9fd7; */
+    width:15rem;
+}
+#leaderboard-body table th:nth-child(1){
+    width:4rem;
+}
+#leaderboard-body tr:nth-child(odd){
+    color:#005894;
+    background-color: white;
+}
+#leaderboard-body tr:nth-child(even){
+    color:#005894;
+    background-color: lightgray;
+}
+.div-hide{
+    display: none;
+}

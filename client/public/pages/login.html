@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat-Web, Montserrat, -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="/client/public/style/signup.css">
+
+    <script type="module" src="/client/public/scripts/login.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar">   
+    </div>
+    
+    <!-- login Form Section -->
+    <div id="login">
+        <h2>Sign In</h2>
+        <form id="login_form" action="">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" required>
+            <label for="password">Password *</label>
+            <input type="password" id="password" required>
+            <input type="submit" value="Log In" id="register">
+            <hr>
+            <span>New customer? <a href="./signup.html">Create your account.</a></span>
+            <span>Go to admin login <a href="./admin_login.html">Admin Login.</a></span>
+        </form>
+    </div>
+</body>
+</html>

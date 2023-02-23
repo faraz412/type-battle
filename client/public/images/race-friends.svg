@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 289.05 175.47">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .13;
+      }
+
+      .cls-2 {
+        fill: #0880c4;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #e31e26;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-6 {
+        fill: #aab3cf;
+      }
+
+      .cls-7 {
+        fill: #242631;
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-9 {
+        fill: #363746;
+      }
+
+      .cls-10 {
+        fill: #a9dde2;
+      }
+
+      .cls-11 {
+        fill: #9ba0af;
+      }
+
+      .cls-12 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-13 {
+        fill: #d5d5d5;
+      }
+
+      .cls-14 {
+        fill: none;
+      }
+
+      .cls-15 {
+        fill: #1a1818;
+      }
+
+      .cls-16 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-17 {
+        fill: #050606;
+      }
+
+      .cls-18 {
+        fill: #aadde1;
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-14" d="M141.85,36.85c13.99-28.14,21.29-27.1,21.29-27.1,0,0,18.46-.6,24.3-.09s7.8,4.21,7.8,4.21l5.86,9s3.91,5.3-5.81,6.38c-7.76,.86-53.44,7.6-53.44,7.6Z"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <path class="cls-14" d="M137.86,9.83l-17.43,18.62,9.75,8.97,15.95-22.31s2.9-3.19-.02-4.77l-8.26-.51Z"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <path class="cls-14" d="M88.94,111.92c13.79-27.74,20.98-26.72,20.98-26.72,0,0,18.2-.59,23.95-.09s7.69,4.15,7.69,4.15l5.78,8.87s3.85,5.22-5.73,6.29c-7.65,.85-52.69,7.49-52.69,7.49Z"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <path class="cls-14" d="M85.01,85.28l-17.18,18.35,9.61,8.85,15.73-22s2.86-3.15-.02-4.7l-8.15-.5Z"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g id="Group_792" data-name="Group 792">
+        <g id="Group_458" data-name="Group 458">
+          <path id="Path_932" data-name="Path 932" class="cls-15" d="M190.16,141.66H79.73c-35.99,.14-65.28-28.92-65.42-64.91-.14-35.99,28.92-65.28,64.91-65.42,.17,0,.34,0,.51,0h110.43c35.99,.14,65.05,29.43,64.91,65.42-.14,35.79-29.12,64.77-64.91,64.91h0ZM79.73,39.85c-20.24,0-36.65,16.41-36.65,36.65s16.41,36.65,36.65,36.65h110.43c20.24,0,36.65-16.41,36.65-36.65s-16.41-36.65-36.65-36.65H79.73Z"/>
+        </g>
+        <g id="Group_459" data-name="Group 459">
+          <path id="Path_933" data-name="Path 933" class="cls-3" d="M190.27,129.73h-33.91v-4.64h33.91v4.64Zm-67.7,0h-33.8v-4.64h33.8v4.64Zm-67.71-6.16c-10.49-5.57-18.84-14.48-23.72-25.31l4.24-1.9c4.46,9.89,12.07,18.02,21.66,23.11l-2.17,4.1Zm168.18-5.21l-2.87-3.65c8.52-6.71,14.57-16.07,17.18-26.59l4.51,1.11c-2.86,11.53-9.48,21.79-18.82,29.14h0ZM32.56,64.83l-4.51-1.11c2.87-11.53,9.5-21.77,18.84-29.12l2.87,3.65c-8.53,6.7-14.58,16.05-17.21,26.58h0Zm201.94-8.24c-4.47-9.88-12.1-18-21.68-23.08l2.17-4.11c10.5,5.56,18.85,14.46,23.75,25.28l-4.23,1.91Zm-53.43-28.67h-33.8v-4.64h33.8v4.64Zm-67.59,0h-33.8v-4.64h33.8v4.64Z"/>
+        </g>
+      </g>
+      <g id="Layer_2-2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1-2">
+          <g id="Basic_Red" data-name="Basic Red">
+            <g id="Layer_2-2" data-name="Layer 2-2">
+              <g id="Premium">
+                <g id="premium-water">
+                  <path id="Path_883" data-name="Path 883" class="cls-4" d="M120.92,28.44l-26.74,.1c-20.93,.08-37.84,12-37.75,34.82l.05,14.84c-2.93,.26-5.09,2.84-4.83,5.77,.23,2.58,2.28,4.62,4.87,4.83l172.52-.62,55.41-9.77c2.78-.25,4.83-2.71,4.58-5.49-.22-2.44-2.17-4.38-4.61-4.58l.1-32.82c-.02-6.59-4.94-11.91-10.98-11.88h-1.68c-25.2,.1-43.01-6.21-65.11-18.32l-4.76-2.61c-2.74-1.38-5.71-2.26-8.76-2.62-4.87-.51-38.87,1.2-38.87,1.2-6.7-.68-13.17,2.67-16.49,8.54-5.79,10.09-17.42,19.14-17.42,19.14"/>
+                  <path id="Path_884" data-name="Path 884" class="cls-9" d="M56.49,78.2c-2.93,.26-5.09,2.84-4.83,5.77,.23,2.58,2.28,4.62,4.87,4.83l172.52-.62,55.41-9.77c2.78-.25,4.83-2.71,4.58-5.49-.22-2.44-2.17-4.38-4.61-4.58l.15-23.85-10.16,10.63,.52,13.27v3.16s-44.47,7.61-44.47,7.61l-173.98-.96Z"/>
+                  <g id="Group_428" data-name="Group 428" class="cls-1">
+                    <path id="Path_885" data-name="Path 885" class="cls-17" d="M56.45,66.02s13.94-34.74,65.02-19.56l163.04-10.94c-.02-6.59-4.94-11.91-10.98-11.88l-33.1,.14c-6.8,.02-108.8,14.18-108.8,14.18l-10.73-9.5-26.74,.1s-37.73-1.34-37.73,37.46Z"/>
+                  </g>
+                  <ellipse id="Ellipse_199" data-name="Ellipse 199" class="cls-7" cx="92.15" cy="75.61" rx="25.69" ry="25.85" transform="translate(8.12 160.16) rotate(-84.55)"/>
+                  <ellipse id="Ellipse_200" data-name="Ellipse 200" class="cls-9" cx="92.25" cy="75.61" rx="25" ry="25.16" transform="translate(8.22 160.26) rotate(-84.55)"/>
+                  <ellipse id="Ellipse_201" data-name="Ellipse 201" class="cls-17" cx="92.14" cy="75.59" rx="18.82" ry="18.93" transform="translate(8.12 160.12) rotate(-84.53)"/>
+                  <ellipse id="Ellipse_202" data-name="Ellipse 202" class="cls-3" cx="92.14" cy="75.6" rx="17.9" ry="18.01" transform="translate(8.11 160.12) rotate(-84.53)"/>
+                  <ellipse id="Ellipse_203" data-name="Ellipse 203" class="cls-13" cx="92.14" cy="75.59" rx="16.98" ry="17.09" transform="translate(8.12 160.12) rotate(-84.53)"/>
+                  <ellipse id="Ellipse_204" data-name="Ellipse 204" class="cls-6" cx="92.14" cy="75.6" rx="10.55" ry="10.62" transform="translate(8.12 160.12) rotate(-84.54)"/>
+                  <ellipse id="Ellipse_205" data-name="Ellipse 205" class="cls-11" cx="92.14" cy="75.59" rx="9.64" ry="9.7" transform="translate(8.11 160.12) rotate(-84.53)"/>
+                  <g id="Group_431" data-name="Group 431">
+                    <g class="cls-12">
+                      <g id="Group_430" data-name="Group 430">
+                        <g id="Group_429" data-name="Group 429">
+                          <path id="Path_886" data-name="Path 886" class="cls-18" d="M142.73,8.71h62.27v28.14h-63.16V8.71h.89Z"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g id="Group_434" data-name="Group 434">
+                    <g class="cls-8">
+                      <g id="Group_433" data-name="Group 433">
+                        <g id="Group_432" data-name="Group 432">
+                          <path id="Path_888" data-name="Path 888" class="cls-10" d="M121.06,9.83h27.99v27.59h-28.61V9.83h.62Z"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <ellipse id="Ellipse_206" data-name="Ellipse 206" class="cls-7" cx="238.62" cy="75.59" rx="25.7" ry="25.86" transform="translate(140.64 305.93) rotate(-84.53)"/>
+            <ellipse id="Ellipse_207" data-name="Ellipse 207" class="cls-9" cx="238.62" cy="75.59" rx="25.01" ry="25.17" transform="translate(140.64 305.93) rotate(-84.53)"/>
+            <ellipse id="Ellipse_208" data-name="Ellipse 208" class="cls-17" cx="238.62" cy="75.59" rx="18.82" ry="18.93" transform="translate(140.64 305.93) rotate(-84.53)"/>
+            <ellipse id="Ellipse_209" data-name="Ellipse 209" class="cls-3" cx="238.62" cy="75.59" rx="17.9" ry="18.01" transform="translate(140.64 305.93) rotate(-84.53)"/>
+            <ellipse id="Ellipse_210" data-name="Ellipse 210" class="cls-13" cx="238.62" cy="75.59" rx="16.98" ry="17.09" transform="translate(140.64 305.93) rotate(-84.53)"/>
+            <ellipse id="Ellipse_211" data-name="Ellipse 211" class="cls-6" cx="238.62" cy="75.59" rx="10.55" ry="10.62" transform="translate(140.64 305.93) rotate(-84.53)"/>
+            <ellipse id="Ellipse_212" data-name="Ellipse 212" class="cls-11" cx="238.62" cy="75.59" rx="9.64" ry="9.7" transform="translate(140.64 305.93) rotate(-84.53)"/>
+          </g>
+        </g>
+      </g>
+      <g id="Layer_2-2-2" data-name="Layer 2-2-2">
+        <g id="Layer_1-2-2" data-name="Layer 1-2-2">
+          <g id="Basic_Blue" data-name="Basic Blue">
+            <g id="Layer_2-2-3" data-name="Layer 2-2-3">
+              <g id="Premium-2">
+                <g id="premium-water-2">
+                  <path id="Path_890" data-name="Path 890" class="cls-2" d="M68.31,103.64l-26.36,.1c-20.64,.08-37.3,11.83-37.22,34.33l.05,14.63c-2.88,.26-5.02,2.8-4.76,5.69,.23,2.54,2.25,4.55,4.8,4.76l170.09-.62,54.63-9.63c2.74-.24,4.76-2.66,4.52-5.4-.21-2.42-2.14-4.33-4.56-4.52l.1-32.36c-.02-6.49-4.87-11.74-10.82-11.72h-1.66c-24.85,.1-42.41-6.12-64.2-18.06l-4.69-2.57c-2.7-1.36-5.63-2.23-8.63-2.58-4.8-.5-38.32,1.19-38.32,1.19-6.61-.67-12.99,2.64-16.26,8.42-5.71,9.95-17.18,18.87-17.18,18.87"/>
+                  <path id="Path_891" data-name="Path 891" class="cls-9" d="M4.79,152.69c-2.88,.26-5.02,2.8-4.76,5.69,.23,2.54,2.25,4.55,4.8,4.76l170.08-.61,54.63-9.63c2.74-.24,4.76-2.66,4.52-5.4-.21-2.42-2.14-4.33-4.56-4.52l.15-23.52-10.01,10.48,.52,13.08v3.12s-43.84,7.5-43.84,7.5l-171.52-.95Z"/>
+                  <g id="Group_435" data-name="Group 435" class="cls-1">
+                    <path id="Path_892" data-name="Path 892" class="cls-17" d="M4.74,140.68s13.74-34.25,64.1-19.28l160.74-10.78c-.02-6.49-4.87-11.74-10.82-11.72l-32.63,.14c-6.71,.02-107.27,13.98-107.27,13.98l-10.58-9.37-26.36,.09s-37.19-1.31-37.19,36.94Z"/>
+                  </g>
+                  <ellipse id="Ellipse_213" data-name="Ellipse 213" class="cls-7" cx="39.94" cy="150.14" rx="25.32" ry="25.48" transform="translate(-113.32 175.63) rotate(-84.55)"/>
+                  <ellipse id="Ellipse_214" data-name="Ellipse 214" class="cls-9" cx="39.94" cy="150.12" rx="24.66" ry="24.81" transform="translate(-113.31 175.58) rotate(-84.53)"/>
+                  <ellipse id="Ellipse_215" data-name="Ellipse 215" class="cls-17" cx="39.94" cy="150.12" rx="18.55" ry="18.67" transform="translate(-113.31 175.58) rotate(-84.53)"/>
+                  <ellipse id="Ellipse_216" data-name="Ellipse 216" class="cls-3" cx="39.94" cy="150.12" rx="17.65" ry="17.76" transform="translate(-113.31 175.57) rotate(-84.53)"/>
+                  <ellipse id="Ellipse_217" data-name="Ellipse 217" class="cls-13" cx="39.94" cy="150.12" rx="16.74" ry="16.85" transform="translate(-113.31 175.58) rotate(-84.53)"/>
+                  <ellipse id="Ellipse_218" data-name="Ellipse 218" class="cls-6" cx="39.94" cy="150.12" rx="10.4" ry="10.47" transform="translate(-113.31 175.58) rotate(-84.54)"/>
+                  <ellipse id="Ellipse_219" data-name="Ellipse 219" class="cls-11" cx="39.94" cy="150.12" rx="9.5" ry="9.56" transform="translate(-113.31 175.58) rotate(-84.53)"/>
+                  <g id="Group_438" data-name="Group 438">
+                    <g class="cls-5">
+                      <g id="Group_437" data-name="Group 437">
+                        <g id="Group_436" data-name="Group 436">
+                          <path id="Path_893" data-name="Path 893" class="cls-18" d="M89.81,84.18h61.39v27.74h-62.26v-27.74h.87Z"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g id="Group_441" data-name="Group 441">
+                    <g class="cls-16">
+                      <g id="Group_440" data-name="Group 440">
+                        <g id="Group_439" data-name="Group 439">
+                          <path id="Path_895" data-name="Path 895" class="cls-10" d="M68.44,85.28h27.59v27.2h-28.21v-27.2h.61Z"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <ellipse id="Ellipse_220" data-name="Ellipse 220" class="cls-7" cx="184.35" cy="150.12" rx="25.33" ry="25.5" transform="translate(17.35 319.33) rotate(-84.53)"/>
+            <ellipse id="Ellipse_221" data-name="Ellipse 221" class="cls-9" cx="184.35" cy="150.12" rx="24.66" ry="24.81" transform="translate(17.35 319.33) rotate(-84.53)"/>
+            <ellipse id="Ellipse_222" data-name="Ellipse 222" class="cls-17" cx="184.35" cy="150.12" rx="18.55" ry="18.67" transform="translate(17.35 319.33) rotate(-84.53)"/>
+            <ellipse id="Ellipse_223" data-name="Ellipse 223" class="cls-3" cx="184.35" cy="150.12" rx="17.65" ry="17.76" transform="translate(17.35 319.33) rotate(-84.53)"/>
+            <ellipse id="Ellipse_224" data-name="Ellipse 224" class="cls-13" cx="184.35" cy="150.12" rx="16.74" ry="16.85" transform="translate(17.35 319.33) rotate(-84.53)"/>
+            <ellipse id="Ellipse_225" data-name="Ellipse 225" class="cls-6" cx="184.35" cy="150.12" rx="10.4" ry="10.47" transform="translate(17.35 319.33) rotate(-84.53)"/>
+            <ellipse id="Ellipse_226" data-name="Ellipse 226" class="cls-11" cx="184.35" cy="150.12" rx="9.5" ry="9.56" transform="translate(17.35 319.33) rotate(-84.53)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

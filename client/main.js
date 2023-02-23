@@ -3,19 +3,31 @@ import './style.css'
 
 document.querySelector('#navbar').innerHTML = `
 <nav>
-        <label class="logo"><img src="/images/logo.png" alt="logo"></label>
-        <ul>
-          <li><a href="">Pit Stop</a></li>
-          <li><a href="">Updates</a></li>
-          <li><a href="">Discord</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Merch</a></li>
-          <li><a href="">CREATE ACCOUNT</a></li>
-          <li><a href="">SIGN IN</a></li>
-        </ul>
-        <div id="user-wpm-nav">0 WPM</div>
-        <div id="user-race-nav">0 RACES</div>
-      </nav>
+  <div class="nav-logo">
+    <img src="./public/images/logo.png" alt="logo">
+  </div>
+  <div id="nav-menu">
+      <li><a href="">Pit Stop</a></li>
+      <li><a href="">Updates</a></li>
+      <li><a href="">Discord</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Merch</a></li>
+  </div>
+  <div id="nav-user">
+    <div id="nav-user-avatar">
+      <img src="./public/images/helmet.png" alt="user-avatar">
+    </div>
+    <div id="nav-user-details">
+      <h4 style="color:white; margin-bottom: 3px;" >Guest</h4>
+      <div id="nav-user-auth">
+        <button id="nav-acc-btn">CREATE ACCOUNT</button>
+        <button id="nav-login-btn">SIGN IN</button>
+        <div id="nav-wpm"><span>0</span>&nbsp;WPM</div>
+        <div id="nav-races"><span>0</span>&nbsp;Races</div>
+      </div>
+    </div>
+  </div>
+</nav>
 `
 const latest_tbody=document.querySelector("#latest");
 const myscores_tbody=document.querySelector("#my-scores");

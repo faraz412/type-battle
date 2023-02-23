@@ -76,3 +76,8 @@ function displayhof(arr) {
 }
 
 
+let socket = io("http://localhost:8080",{transports:["websocket"]});
+
+
+
+

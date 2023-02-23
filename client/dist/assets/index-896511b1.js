@@ -13,7 +13,7 @@
         <div id="user-wpm-nav">0 WPM</div>
         <div id="user-race-nav">0 RACES</div>
       </nav>
-`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");let l=document.getElementById("app");l.innerHTML=`
+`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("http://localhost:8080",{transports:["websocket"]});let l=document.getElementById("app");l.innerHTML=`
 <div id="leaderboard">
       <h1>LEADERBOARD</h1>
       <div id="leaderboard-menu">

@@ -23,7 +23,7 @@
     </div>
     
     <!-- Registration Form Section -->
-    <div id="registration">
+    <div id="registration" class="registration reg_form">
         <h2>Create Account</h2>
         <form id="registration_form" action="">
             <div class="register_inner_div">
@@ -40,9 +40,22 @@
             <input type="email" id="email" required>
             <label for="password">Password *</label>
             <input type="password" id="password" required>
+
             <input type="submit" value="Create Account" id="register">
             <hr>
             <span>Already have an account? <a href="./login.html">log in.</a></span>
+        </form>
+    </div>  
+    
+    <!-- Otp Form Section -->
+    <div id="registration_otp" class="registration otp_form">
+        <h2>Email Verification</h2>
+        <form id="otp_form" action="">
+
+            <label for="otp">Enter otp received on your email *</label>
+            <input type="text" id="otp" required>
+
+            <input type="submit" value="Validate Otp" id="register1">
         </form>
     </div>  
 </body>

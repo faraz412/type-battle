@@ -4,13 +4,13 @@
     font-family: sans-serif;
 }
 
-#registration h2, #login h2{
+.registration h2, #login h2{
     width: 28%;
     padding: 50px 0px 17px 0px;
     margin: auto;
 }
 
-#registration form , #login form {
+.registration form , #login form {
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -21,7 +21,7 @@
     margin-bottom: 80px;
     font-weight: 500;
 }
-#registration span, #login span{
+.registration span, #login span{
     text-align: center;
     font-weight: 400;
 }

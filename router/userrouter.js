@@ -5,7 +5,7 @@ const client=require("../config/redis");
 const otpvalidator=require("../config/mailer")
 var genratedotp;
 // client.on("error",(error)=>{
-//     console.log(error);
+//     console.log("error");
 // })
 
 // client.connect();

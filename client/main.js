@@ -4,7 +4,7 @@ import './style.css'
 document.querySelector('#navbar').innerHTML = `
 <nav>
   <div class="nav-logo">
-    <img src="./public/images/logo.png" alt="logo">
+    <img src="/images/logo.png" alt="logo">
   </div>
   <div id="nav-menu">
       <li><a href="">Pit Stop</a></li>
@@ -15,7 +15,7 @@ document.querySelector('#navbar').innerHTML = `
   </div>
   <div id="nav-user">
     <div id="nav-user-avatar">
-      <img src="./public/images/helmet.png" alt="user-avatar">
+      <img src="/images/helmet.png" alt="user-avatar">
     </div>
     <div id="nav-user-details">
       <h4 style="color:white; margin-bottom: 3px;" >Guest</h4>
@@ -89,7 +89,7 @@ function displayhof(arr) {
 
 let content=""
 //socket:-
-let socket = io("http://localhost:8080",{transports:["websocket"]});
+let socket = io("http://type-battle.onrender.com",{transports:["websocket"]});
 //friend join the room
 // socket.emit("user",{username,room});
 

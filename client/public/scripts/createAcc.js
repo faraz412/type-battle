@@ -4,7 +4,7 @@ let app=document.getElementById("app");
 app.innerHTML+=`
     <div id="create-acc">
       <div id="create-acc-img">
-        <img src="./public/images/cars-sherrif.png" alt="sherriff">
+        <img src="/images/cars-sherrif.png" alt="sherriff">
       </div>
       <div id="create-acc-text">
         <h2>Record your races with a Type Battle Account!</h2>

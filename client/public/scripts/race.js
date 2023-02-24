@@ -7,7 +7,7 @@ app.innerHTML=`
       <div id="race-global">
         <div id="race-global-body">
           <div id="race-logo">
-            <img alt="logo" src="./public/images/flash - Edited (1).png" />
+            <img alt="logo" src="/images/flash - Edited (1).png" />
           </div>
           <div id="race-global-text">
             <h2>Type Battle - The Global Typing Competition</h2>

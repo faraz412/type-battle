@@ -6,7 +6,7 @@
     font-family: sans-serif;
 }
 body{
-    background-image: url(./public/images/bg_race.jpg);
+    background-image: url(/images/bg_race.jpg);
     background-size: 100%;
 }
 

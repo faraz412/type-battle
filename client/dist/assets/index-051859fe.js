@@ -1,7 +1,7 @@
 (function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const d of t.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&a(d)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function a(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();document.querySelector("#navbar").innerHTML=`
 <nav>
   <div class="nav-logo">
-    <img src="./public/images/logo.png" alt="logo">
+    <img src="/images/logo.png" alt="logo">
   </div>
   <div id="nav-menu">
       <li><a href="">Pit Stop</a></li>
@@ -12,7 +12,7 @@
   </div>
   <div id="nav-user">
     <div id="nav-user-avatar">
-      <img src="./public/images/helmet.png" alt="user-avatar">
+      <img src="/images/helmet.png" alt="user-avatar">
     </div>
     <div id="nav-user-details">
       <h4 style="color:white; margin-bottom: 3px;" >Guest</h4>
@@ -25,7 +25,7 @@
     </div>
   </div>
 </nav>
-`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("http://localhost:8080",{transports:["websocket"]});let o=document.getElementById("app");o.innerHTML=`
+`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("http://type-battle.onrender.com",{transports:["websocket"]});let o=document.getElementById("app");o.innerHTML=`
 <div id="race">
 
       <div id="race-global">

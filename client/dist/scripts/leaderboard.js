@@ -1,7 +1,7 @@
 import '../style/signup.css'
 let app=document.getElementById("app");
 
-app.innerHTML=`
+app.innerHTML+=`
 <div id="leaderboard">
       <h1>LEADERBOARD</h1>
       <div id="leaderboard-menu">

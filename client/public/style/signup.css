@@ -69,7 +69,7 @@ hr{
     width:100%;
     padding: 20px;
     background-color: white;
-    background-image: url(./public/images/CARS-3.png);
+    background-image: url(/images/CARS-3.png);
     background-size: 35rem;
     background-repeat: no-repeat;
     background-position: right -3% bottom 70%;
@@ -120,7 +120,7 @@ hr{
     padding:15px;
     width:49%;
     background-color: white;
-    background-image: url(./public/images/CARS-2.png);
+    background-image: url(/images/CARS-2.png);
     background-repeat: no-repeat;
     background-size: 15rem;
     background-position: right -1% bottom -10%;
@@ -150,7 +150,7 @@ hr{
     padding:15px;
     width:49%;
     background-color: white;
-    background-image: url(./public/images/CARS-1.png);
+    background-image: url(/images/CARS-1.png);
     background-size: 20.5rem;
     background-repeat: no-repeat;
     background-position: right -10% bottom 10%;

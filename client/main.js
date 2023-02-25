@@ -10,7 +10,7 @@ document.querySelector('#navbar').innerHTML = `
       <li><a href="">Pit Stop</a></li>
       <li><a href="">Updates</a></li>
       <li><a href="">Discord</a></li>
-      <li><a href="">About</a></li>
+      <li><a href="/pages/about.html">About</a></li>
       <li><a href="">Merch</a></li>
   </div>
   <div id="nav-user">
@@ -89,7 +89,7 @@ function displayhof(arr) {
 
 let content=""
 //socket:-
-let socket = io("http://type-battle.onrender.com",{transports:["websocket"]});
+let socket = io("http://type-battle.onrender.com:1337",{transports:["websocket"]});
 //friend join the room
 // socket.emit("user",{username,room});
 
@@ -103,3 +103,28 @@ let socket = io("http://type-battle.onrender.com",{transports:["websocket"]});
 // content=msg;
 // });
 
+
+//redirection//
+let create_account_btn = document.getElementById("nav-acc-btn");
+create_account_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="/pages/signup.html"
+})
+let signin_btn = document.getElementById("nav-login-btn")
+signin_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="/pages/login.html"
+})
+
+let logo_btn = document.querySelector(".nav-logo")
+ logo_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="./index.html"
+ })
+
+
+//  let btn= document.getElementById("race-global-btn")
+// btn.addEventListener("click",(e)=>{
+//   e.preventDefault();
+//   console.log("hi");
+// })

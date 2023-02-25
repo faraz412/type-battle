@@ -257,4 +257,3 @@ racefriendsBtn.addEventListener("click",(e)=>{
 
 
 // console.log(outputmessage())
-

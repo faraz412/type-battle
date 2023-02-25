@@ -10,7 +10,7 @@ document.querySelector('#navbar').innerHTML = `
       <li><a href="">Pit Stop</a></li>
       <li><a href="">Updates</a></li>
       <li><a href="">Discord</a></li>
-      <li><a href="">About</a></li>
+      <li><a href="/pages/about.html">About</a></li>
       <li><a href="">Merch</a></li>
   </div>
   <div id="nav-user">
@@ -89,7 +89,7 @@ function displayhof(arr) {
 
 let content=""
 //socket:-
-let socket = io("http://type-battle.onrender.com",{transports:["websocket"]});
+let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
 //friend join the room
 // socket.emit("user",{username,room});
 
@@ -104,13 +104,28 @@ let socket = io("http://type-battle.onrender.com",{transports:["websocket"]});
 // });
 
 
+//redirection//
+let create_account_btn = document.getElementById("nav-acc-btn");
+create_account_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="/pages/signup.html"
+})
+let signin_btn = document.getElementById("nav-login-btn")
+signin_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="/pages/login.html"
+})
 
-// -----------------------------SOCKET WORKING----------------------------------//
+let logo_btn = document.querySelector(".nav-logo")
+ logo_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="./index.html"
+ })
+ 
+ // -----------------------------SOCKET WORKING----------------------------------//
 // function connection(){
 //   let socket = io("http://localhost:8080",{transports:["websocket"]});
 //   return socket;
 // }
 // export default connection;
-
-
 

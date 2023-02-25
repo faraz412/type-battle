@@ -1,4 +1,4 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const d of t.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&a(d)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function a(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();document.querySelector("#navbar").innerHTML=`
+(function(){const d=document.createElement("link").relList;if(d&&d.supports&&d.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function r(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();document.querySelector("#navbar").innerHTML=`
 <nav>
   <div class="nav-logo">
     <img src="/images/logo.png" alt="logo">
@@ -7,7 +7,7 @@
       <li><a href="">Pit Stop</a></li>
       <li><a href="">Updates</a></li>
       <li><a href="">Discord</a></li>
-      <li><a href="">About</a></li>
+      <li><a href="/pages/about.html">About</a></li>
       <li><a href="">Merch</a></li>
   </div>
   <div id="nav-user">
@@ -25,7 +25,7 @@
     </div>
   </div>
 </nav>
-`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("http://type-battle.onrender.com",{transports:["websocket"]});let o=document.getElementById("app");o.innerHTML=`
+`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("https://type-battle.onrender.com",{transports:["websocket"]});let o=document.getElementById("nav-acc-btn");o.addEventListener("click",i=>{i.preventDefault(),window.location.href="/pages/signup.html"});let l=document.getElementById("nav-login-btn");l.addEventListener("click",i=>{i.preventDefault(),window.location.href="/pages/login.html"});let c=document.querySelector(".nav-logo");c.addEventListener("click",i=>{i.preventDefault(),window.location.href="./index.html"});let s=document.getElementById("app");s.innerHTML=`
 <div id="race">
 
       <div id="race-global">
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-`;let n=document.getElementById("app");n.innerHTML+=`
+`;document.getElementById("race-global-btn").addEventListener("click",()=>{console.log("hi")});let p=document.getElementById("app");p.innerHTML+=`
     <div id="create-acc">
       <div id="create-acc-img">
         <img src="/images/cars-sherrif.png" alt="sherriff">
@@ -72,7 +72,7 @@
       </div>
       <button id="create-acc-btn">Create Your Account</button>
     </div>
-`;let s=document.getElementById("app");s.innerHTML+=`
+`;let v=document.getElementById("app");v.innerHTML+=`
 <div id="leaderboard">
       <h1>LEADERBOARD</h1>
       <div id="leaderboard-menu">
@@ -161,4 +161,20 @@
         </div>
       </div>
     </div>
+`;let h=document.getElementById("app");h.innerHTML+=`
+<div id="footer">
+    <div id="footer-body">
+        <div id="footer-right">
+            <a href="">Home</a>|
+            <a href="">Terms of Service</a>|
+            <a href="">Privacy Policy</a>|
+            <a href="">Contact</a>|
+            <a href="">Contribute</a>|
+            <a href="">FAQ</a>
+        </div>
+        <div id="footer-left">
+            <button id="dark-mode-btn">Change Theme - Dark Mode</button>
+        </div>
+    </div>
+</div>
 `;

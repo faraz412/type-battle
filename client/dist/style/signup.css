@@ -306,3 +306,111 @@ hr{
 .div-hide{
     display: none;
 }
+/* --------------------Race Cont------------------------- */
+.race-cont{
+    /* border:1px solid red; */
+    margin:2rem auto;
+    width:75rem;
+    padding: 1.5rem;
+    background-color: rgb(152, 227, 220);
+    border-radius: 10px;
+}
+.race-status{
+    /* border:1px solid red; */
+    margin-bottom:1rem;
+    font-size: 20px;
+}
+.race-body>table{
+    /* border:1px solid red; */
+    width:100%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+.progressBarCont{
+    /* border:1px solid black; */
+    width:85%;
+    border-bottom: 2px dashed green;
+}
+.avatar{
+    display:flex;
+}
+.avatarContainer{
+    width:5rem;
+    /* border:1px solid black; */
+}
+.rankPanelCont{
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    border-radius: 5px;
+    width:10%;
+}
+.rankWpm{
+    text-align: center;
+    font-size: 20px;
+}
+.race-text-cont{
+    /* border:1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #F4EFDF;
+    width:96%;
+    border-radius:10px;
+    margin:1.5rem 0;
+    padding:1.5rem;
+}
+.given-text{
+    margin-bottom:1rem;
+    font-size: 18px;
+    line-height: 1.8rem;
+}
+.input-text{
+    /* border:1px solid black; */
+    width:100%;
+}
+.input-text>input{
+    width:98%;
+    margin: auto;
+    border-radius: 5px;
+    border:1px solid gray
+}
+/* --------------FOOTER---------------- */
+#footer{
+    background-color: #005894;
+    padding:30px;
+    height:4rem;
+}
+#footer-body{
+    /* border:1px solid red; */
+    width:75rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#footer-right{
+    /* border:1px solid white; */
+    color:white;
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer-left{
+    /* border:1px solid white; */
+    width:25%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+#footer-right>a{
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+}
+#dark-mode-btn{
+    margin:auto;
+    padding:15px 15px;
+    border-radius: 10px;
+    border:1px solid #2dbcd5;
+    background-color: #2dbcd5;
+    color: #F4EFDF;
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -52,12 +52,20 @@ adminrouter.post("/register",async(req,res)=>{
         }
         })
 
-
+        adminrouter.get("/block/:id",async(req,res)=>{
+            let id=req.params.id;
+            let data=new BlockuserModel({"user_id":id});
+            await data.save();
+            res.status(200).send({"msg":"user has been blocked"})
+            })
 
 adminrouter.get("/read",async(req,res)=>{
     let data=await UserModel.find();
     res.status(200).send(data);
 })
+
+
+
 
 
 module.exports=adminrouter;

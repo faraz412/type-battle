@@ -38,3 +38,7 @@ app.innerHTML=`
     </div>
 
 `
+
+document.getElementById("race-global-btn").addEventListener("click",()=>{
+  console.log("hi");
+})

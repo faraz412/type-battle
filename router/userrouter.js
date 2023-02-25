@@ -85,6 +85,7 @@ userrouter.post("/login",async(req,res)=>{
                 }
             });
         }
+    }
     } catch (error) {
         console.log(error);
         res.status(404).send({"msg":"Something went wrong!",err:error.message});
@@ -142,12 +143,7 @@ userrouter.post("/login",async(req,res)=>{
 // }
 // })
 
-userrouter.get("/block/:id",async(req,res)=>{
-let id=req.params.id;
-let data=new BlockuserModel({"user_id":id});
-await data.save();
-res.status(200).send({"msg":"user has been blocked"})
-})
+
 
 
 

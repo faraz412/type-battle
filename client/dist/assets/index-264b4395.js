@@ -25,7 +25,7 @@
     </div>
   </div>
 </nav>
-`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("http://type-battle.onrender.com:1337",{transports:["websocket"]});let o=document.getElementById("nav-acc-btn");o.addEventListener("click",i=>{i.preventDefault(),window.location.href="/pages/signup.html"});let l=document.getElementById("nav-login-btn");l.addEventListener("click",i=>{i.preventDefault(),window.location.href="/pages/login.html"});let c=document.querySelector(".nav-logo");c.addEventListener("click",i=>{i.preventDefault(),window.location.href="./index.html"});let s=document.getElementById("app");s.innerHTML=`
+`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("https://type-battle.onrender.com",{transports:["websocket"]});let o=document.getElementById("nav-acc-btn");o.addEventListener("click",i=>{i.preventDefault(),window.location.href="/pages/signup.html"});let l=document.getElementById("nav-login-btn");l.addEventListener("click",i=>{i.preventDefault(),window.location.href="/pages/login.html"});let c=document.querySelector(".nav-logo");c.addEventListener("click",i=>{i.preventDefault(),window.location.href="./index.html"});let s=document.getElementById("app");s.innerHTML=`
 <div id="race">
 
       <div id="race-global">

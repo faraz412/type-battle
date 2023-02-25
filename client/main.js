@@ -89,7 +89,7 @@ function displayhof(arr) {
 
 let content=""
 //socket:-
-let socket = io("http://type-battle.onrender.com:1337",{transports:["websocket"]});
+let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
 //friend join the room
 // socket.emit("user",{username,room});
 

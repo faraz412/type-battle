@@ -103,3 +103,14 @@ let socket = io("http://type-battle.onrender.com",{transports:["websocket"]});
 // content=msg;
 // });
 
+
+
+// -----------------------------SOCKET WORKING----------------------------------//
+// function connection(){
+//   let socket = io("http://localhost:8080",{transports:["websocket"]});
+//   return socket;
+// }
+// export default connection;
+
+
+

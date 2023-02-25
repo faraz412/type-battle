@@ -8,7 +8,7 @@ const connection = require("./config/db")
 require("dotenv").config()
 const cors=require("cors")
 const path=require("path");
-const { content_msg } = require('./socket functions/message');
+const { content_msg, formatemessage } = require('./socket functions/message');
 app.use(cors())
 app.use(express.json())
 
@@ -55,7 +55,7 @@ io.on('connection', (socket) => {
           console.log(msg);
       io.to(user.room).emit("chat message",formatemessage(username,msg));
       })
-      io.to(user.room).emit("roomUsers",{room:user.room,user:getRoomuser(user.room)});
+      // io.to(user.room).emit("roomUsers",{room:user.room,user:getRoomuser(user.room)});
       socket.on('disconnect', () => {
         socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has left the race`))
         console.log('user disconnected');

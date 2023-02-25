@@ -1,6 +1,12 @@
+const fetch = require('node-fetch');
+
 let content="content";
+connect=fetch('https://github.com/')
+    .then(res => res.text())
+    .then(body => body);
 let i=0;
 const moment=require("moment");
+const { connect } = require('mongoose');
 function formatemessage(username,text){
     return{
         username,

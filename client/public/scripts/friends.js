@@ -137,9 +137,10 @@ friendsRace.innerHTML=`
             }else if(padding>=900){
                 // document.getElementById(`avatar${i}`).style.paddingLeft="900px";
                 document.getElementById(`rank${i}`).innerText="rank "+k;
-                alert("you got "+k+" position")
+                alert("you got "+k+" position");
                 k++;
                 window.location="../index.html";
+                break;
             }
             i++;
         // console.log(raceObj)

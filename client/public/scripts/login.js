@@ -34,11 +34,11 @@ async function loginFromDb(obj){
             let loggedUser= data.user;
             localStorage.setItem("token",token);
             localStorage.setItem("loggedUser",loggedUser);            
-            window.location.assign("/client/index.html"); 
+            window.location.assign("https://type-battle.onrender.com/"); 
 
         }else if(res.status==409){
             alert(data.msg);
-            window.location.assign("/client/public/pages/signup.html"); 
+            window.location.assign("../pages/signup.html"); 
         }else{
             alert(data.msg);
         }

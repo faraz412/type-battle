@@ -83,7 +83,7 @@ async function user_Reg(user_Obj){
         
         if(res.status==200){
             alert(data.msg);
-            window.location.assign("/client/public/pages/login.html"); 
+            window.location.assign("../pages/login.html"); 
         }else{
             alert(data.msg);
         }

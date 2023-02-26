@@ -8,8 +8,8 @@ const connection = require("./config/db")
 require("dotenv").config()
 const cors=require("cors")
 const path=require("path");
-const { content_msg, formatemessage } = require('./socket functions/message');
-const { userjoin } = require('./socket functions/user');
+const { content_msg, formatemessage, content_check } = require('./socket functions/message');
+const { userjoin, getRoomuser, deleteuser } = require('./socket functions/user');
 app.use(cors())
 app.use(express.json())
 
@@ -35,32 +35,38 @@ io.on('connection', (socket) => {
     socket.on("user enter in room",({username})=>{
       console.log("user enter in room");
       socket.emit("content",content_msg());
-      // socket.on("type message",(char)=>{
-      //     if(content_check(char)){
-      //       socket.emit("content",true);
-      //     }else {
-      //       socket.emit("content",false);
-      //     }
-      // })
     })
     socket.on("user",({username,room})=>{
-      console.log(username,room);
+
+      //console.log(username,room);
       const user=userjoin(socket.id,username,room);//user store
-      console.log(user);
-      socket.join(user.room);//join the room
-      socket.emit("message",formatemessage(user.username,"welcome to type battle"));// individual message
-      //brodcast to other user
-          socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has join the race`))// message to all except me
-          socket.emit("content",content_msg());
-      socket.on("msg",(msg)=>{
-          console.log(msg);
-      io.to(user.room).emit("chat message",formatemessage(username,msg));//message to all
-      })
-      // io.to(user.room).emit("roomUsers",{room:user.room,user:getRoomuser(user.room)});
-      socket.on('disconnect', () => {
-        socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has left the race`))
-        console.log('user disconnected');
-      });
+      //console.log(user);
+
+      if(user==""){
+        socket.emit("roomFull","Maximum users have joined the race");
+      }else{
+
+        socket.join(user.room);//join the room
+        socket.emit("message",formatemessage(user.username,"welcome to type battle"));// individual message
+       socket.emit("number of users",getRoomuser());
+        socket.emit("content",content_msg(user.username));
+        //brodcast to other user
+            // socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has join the race`))// message to all except me
+            socket.broadcast.to(user.room).emit("number of users",getRoomuser());
+            socket.on("type message",(char)=>{
+              socket.emit("status",content_check(char,user.username));
+          })
+        socket.on("msg",(msg)=>{
+            console.log(msg);
+        io.to(user.room).emit("chat message",formatemessage(username,msg));//message to all
+        })
+        // io.to(user.room).emit("roomUsers",{room:user.room,user:getRoomuser(user.room)});
+        socket.on('disconnect', () => {
+          socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has left the race`))
+          deleteuser(user.username);
+          console.log('user disconnected');
+        });
+      }
   })
     socket.on('disconnect', () => {
       console.log('user disconnected');

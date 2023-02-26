@@ -17,7 +17,7 @@ form.addEventListener("submit",(event)=>{
 
 async function loginFromDb(obj){
     try {
-        let url = baseURL+"/user/login"
+        let url = baseURL+"/api/user/login"
         let res = await fetch(url,{
             method:"POST",
             headers: {

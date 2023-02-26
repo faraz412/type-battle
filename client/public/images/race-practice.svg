@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="354" height="154.534" viewBox="0 0 354 154.534">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_873" data-name="Path 873" d="M1091.047,524.257c20.862-41.957,31.734-40.413,31.734-40.413s27.528-.889,36.229-.135,11.636,6.284,11.636,6.284l8.743,13.421s5.823,7.9-8.66,9.51C1159.154,514.206,1091.047,524.257,1091.047,524.257Z" transform="translate(-1091.047 -483.405)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_875" data-name="Path 875" d="M1143.413,483.591l-25.986,27.755,14.541,13.381,23.789-33.27s4.329-4.761-.022-7.112Z" transform="translate(-1117.427 -483.591)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2" transform="translate(9 -3)">
+    <g id="Layer_1-2" data-name="Layer 1-2" transform="translate(-9 3)">
+      <g id="Basic_Red" data-name="Basic Red">
+        <g id="Layer_2-2" data-name="Layer 2-2">
+          <g id="Premium">
+            <g id="premium-water">
+              <path id="Path_869" data-name="Path 869" d="M1152.1,521.242l-39.863.145c-31.21.114-56.414,17.884-56.291,51.92l.079,22.124a7.932,7.932,0,0,0,.056,15.805l257.236-.926,82.617-14.563a7.533,7.533,0,0,0-.053-15.012l.143-48.941c-.033-9.817-7.362-17.757-16.367-17.72l-2.506.01c-37.576.132-64.135-9.266-97.088-27.322l-7.1-3.89a39.217,39.217,0,0,0-13.056-3.9c-7.264-.76-57.957,1.8-57.957,1.8S1186,478.45,1177.366,493.5s-25.979,28.543-25.979,28.543" transform="translate(-1048.805 -478.826)" fill="#e40019"/>
+              <path id="Path_870" data-name="Path 870" d="M1056.029,550.65a7.931,7.931,0,0,0,.055,15.8l257.228-.93,82.617-14.563a7.533,7.533,0,0,0-.053-15.011l.23-35.566-15.149,15.855.781,19.784.018,4.718-66.32,11.344Z" transform="translate(-1048.795 -434.041)" fill="#363746"/>
+              <g id="Group_412" data-name="Group 412" transform="translate(7.169 35.248)" opacity="0.13">
+                <path id="Path_871" data-name="Path 871" d="M1051.007,553.47s20.789-51.8,96.952-29.165l243.1-16.3c-.034-9.817-7.361-17.756-16.366-17.72l-49.356.213c-10.144.037-162.228,21.136-162.228,21.136l-15.993-14.169-39.862.145S1051.007,495.617,1051.007,553.47Z" transform="translate(-1051.007 -490.28)" fill="#040505"/>
+              </g>
+              <ellipse id="Ellipse_171" data-name="Ellipse 171" cx="38.561" cy="38.316" rx="38.561" ry="38.316" transform="matrix(-0.995, -0.095, 0.095, -0.995, 95.128, 154.534)" fill="#242631"/>
+              <ellipse id="Ellipse_172" data-name="Ellipse 172" cx="37.51" cy="37.275" rx="37.51" ry="37.275" transform="translate(94.353 153.413) rotate(-174.546)" fill="#363746"/>
+              <ellipse id="Ellipse_173" data-name="Ellipse 173" cx="28.232" cy="28.054" rx="28.232" ry="28.054" transform="translate(85.824 143.334) rotate(-174.534)" fill="#040505"/>
+              <ellipse id="Ellipse_174" data-name="Ellipse 174" cx="26.854" cy="26.687" rx="26.854" ry="26.687" transform="translate(84.582 141.842) rotate(-174.533)" fill="#fff"/>
+              <ellipse id="Ellipse_175" data-name="Ellipse 175" cx="25.477" cy="25.32" rx="25.477" ry="25.32" transform="translate(83.342 140.35) rotate(-174.534)" fill="#d5d5d5"/>
+              <ellipse id="Ellipse_176" data-name="Ellipse 176" cx="15.836" cy="15.736" rx="15.836" ry="15.736" transform="translate(74.658 129.891) rotate(-174.535)" fill="#aab3cf"/>
+              <ellipse id="Ellipse_177" data-name="Ellipse 177" cx="14.458" cy="14.369" rx="14.458" ry="14.369" transform="translate(73.416 128.399) rotate(-174.534)" fill="#9ba0af"/>
+              <g id="Group_415" data-name="Group 415" transform="translate(134.505 14.093)">
+                <g id="Group_414" data-name="Group 414" clip-path="url(#clip-path)">
+                  <g id="Group_413" data-name="Group 413" transform="translate(0 -1.106)">
+                    <path id="Path_872" data-name="Path 872" d="M1090.851,483.046h92.843V525h-94.163V483.046Z" transform="translate(-1089.531 -483.046)" fill="#a9dce1"/>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_418" data-name="Group 418" transform="translate(102.573 14.664)">
+                <g id="Group_417" data-name="Group 417" transform="translate(0)" clip-path="url(#clip-path-2)">
+                  <g id="Group_416" data-name="Group 416" transform="translate(0.002)">
+                    <path id="Path_874" data-name="Path 874" d="M1117.572,483.591H1159.3v41.133h-42.658V483.591Z" transform="translate(-1116.643 -483.591)" fill="#a8dce2"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <ellipse id="Ellipse_178" data-name="Ellipse 178" cx="38.561" cy="38.316" rx="38.561" ry="38.316" transform="translate(313.526 154.532) rotate(-174.534)" fill="#242631"/>
+        <ellipse id="Ellipse_179" data-name="Ellipse 179" cx="37.528" cy="37.293" rx="37.528" ry="37.293" transform="translate(312.596 153.414) rotate(-174.534)" fill="#363746"/>
+        <ellipse id="Ellipse_180" data-name="Ellipse 180" cx="28.232" cy="28.054" rx="28.232" ry="28.054" transform="translate(304.222 143.333) rotate(-174.534)" fill="#040505"/>
+        <ellipse id="Ellipse_181" data-name="Ellipse 181" cx="26.854" cy="26.687" rx="26.854" ry="26.687" transform="translate(302.98 141.84) rotate(-174.534)" fill="#fff"/>
+        <ellipse id="Ellipse_182" data-name="Ellipse 182" cx="25.477" cy="25.32" rx="25.477" ry="25.32" transform="translate(301.74 140.348) rotate(-174.534)" fill="#d5d5d5"/>
+        <ellipse id="Ellipse_183" data-name="Ellipse 183" cx="15.836" cy="15.736" rx="15.836" ry="15.736" transform="translate(293.055 129.89) rotate(-174.534)" fill="#aab3cf"/>
+        <ellipse id="Ellipse_184" data-name="Ellipse 184" cx="14.458" cy="14.369" rx="14.458" ry="14.369" transform="translate(291.814 128.397) rotate(-174.534)" fill="#9ba0af"/>
+      </g>
+    </g>
+  </g>
+</svg>

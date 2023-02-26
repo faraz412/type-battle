@@ -5,12 +5,13 @@ const client=require("../config/redis");
 const otpvalidator=require("../config/mailer")
 var genratedotp;
 // client.on("error",(error)=>{
-//     console.log(error);
+//     console.log("error");
 // })
 
 // client.connect();
 const bcrypt=require("bcrypt");
 const jwt=require("jsonwebtoken");
+const BlockuserModel = require("../models/block.model");
 const userrouter=express.Router();
 
 userrouter.get("/",(req,res)=>{
@@ -66,7 +67,11 @@ userrouter.post("/login",async(req,res)=>{
         let data=await UserModel.findOne({"email":email});
         if(!data){
             res.status(409).send({"msg":"User does not exits."})
-        }else {
+        }else if(data){
+            let data1=await BlockuserModel.findOne({"user_id":data.id});
+            if(data1){
+                res.status(409).send({"msg":"Your account has been blocked"})
+            }else {
             bcrypt.compare(password, data.password, function(err, result) {
                 if(result){
                     let token=jwt.sign(
@@ -80,6 +85,7 @@ userrouter.post("/login",async(req,res)=>{
                 }
             });
         }
+    }
     } catch (error) {
         console.log(error);
         res.status(404).send({"msg":"Something went wrong!",err:error.message});
@@ -137,13 +143,15 @@ userrouter.post("/login",async(req,res)=>{
 // }
 // })
 
+
+
+
+
 userrouter.get("/logout",async(req,res)=>{
     let token=req.headers.authorization;
    await client.SETEX(`${token}`,60*60,"true")
    res.status(200).send({"msg":"logout successfull"});
 })
-
-
 
 
 module.exports=userrouter;

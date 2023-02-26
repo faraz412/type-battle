@@ -3,19 +3,31 @@ import './style.css'
 
 document.querySelector('#navbar').innerHTML = `
 <nav>
-        <label class="logo"><img src="/images/logo.png" alt="logo"></label>
-        <ul>
-          <li><a href="">Pit Stop</a></li>
-          <li><a href="">Updates</a></li>
-          <li><a href="">Discord</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Merch</a></li>
-          <li><a href="">CREATE ACCOUNT</a></li>
-          <li><a href="">SIGN IN</a></li>
-        </ul>
-        <div id="user-wpm-nav">0 WPM</div>
-        <div id="user-race-nav">0 RACES</div>
-      </nav>
+  <div class="nav-logo">
+    <img src="/images/logo.png" alt="logo">
+  </div>
+  <div id="nav-menu">
+      <li><a href="">Pit Stop</a></li>
+      <li><a href="">Updates</a></li>
+      <li><a href="">Discord</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="">Merch</a></li>
+  </div>
+  <div id="nav-user">
+    <div id="nav-user-avatar">
+      <img src="/images/helmet.png" alt="user-avatar">
+    </div>
+    <div id="nav-user-details">
+      <h4 style="color:white; margin-bottom: 3px;" >Guest</h4>
+      <div id="nav-user-auth">
+        <button id="nav-acc-btn">CREATE ACCOUNT</button>
+        <button id="nav-login-btn">SIGN IN</button>
+        <div id="nav-wpm"><span>0</span>&nbsp;WPM</div>
+        <div id="nav-races"><span>0</span>&nbsp;Races</div>
+      </div>
+    </div>
+  </div>
+</nav>
 `
 const latest_tbody=document.querySelector("#latest");
 const myscores_tbody=document.querySelector("#my-scores");
@@ -75,4 +87,45 @@ function displayhof(arr) {
   });
 }
 
+let content=""
+//socket:-
+let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
+//friend join the room
+// socket.emit("user",{username,room});
+
+// //chat message
+// socket.on("message",(msg)=>{
+// console.log(msg);
+// })
+
+// //broadcast
+// socket.on("content",(msg)=>{
+// content=msg;
+// });
+
+
+//redirection//
+let create_account_btn = document.getElementById("nav-acc-btn");
+create_account_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="/pages/signup.html"
+})
+let signin_btn = document.getElementById("nav-login-btn")
+signin_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="/pages/login.html"
+})
+
+let logo_btn = document.querySelector(".nav-logo")
+ logo_btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  window.location.href="./index.html"
+ })
+ 
+ // -----------------------------SOCKET WORKING----------------------------------//
+// function connection(){
+//   let socket = io("http://localhost:8080",{transports:["websocket"]});
+//   return socket;
+// }
+// export default connection;
 

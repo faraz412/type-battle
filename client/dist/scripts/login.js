@@ -14,6 +14,7 @@ form.addEventListener("submit",(event)=>{
     console.log(obj)
     loginFromDb(obj);
 })
+
 async function loginFromDb(obj){
     try {
         let url = baseURL+"/user/login"
@@ -24,24 +25,25 @@ async function loginFromDb(obj){
             },
             body:JSON.stringify(obj)
         });
-        console.log(res.status)
         let data = await res.json();
-        if(data.msg){
+
+        if(res.status==200){
             alert(data.msg);
-            window.location.assign("/client/index.html");
+            // console.log(data.token,data.user);
+            let token= data.token;
+            let loggedUser= data.user;
+            localStorage.setItem("token",token);
+            localStorage.setItem("loggedUser",loggedUser);            
+            window.location.assign("/client/index.html"); 
+
+        }else if(res.status==409){
+            alert(data.msg);
+            window.location.assign("/client/public/pages/signup.html"); 
         }else{
-            alert(data.err);
+            alert(data.msg);
         }
 
-        let token= data.token;
-        let loggedUserId= data.loggedUserId;
-        localStorage.setItem("token",token)
-        // localStorage.setItem("loggedUserId",loggedUserId)
-        
-        // console.log(token);
-        // alert(JSON.stringify(data));
     } catch (error) {
-        // alert("Wrong Credentials2");
         alert(error.message);
     }
 };

@@ -331,8 +331,13 @@ hr{
     width:85%;
     border-bottom: 2px dashed green;
 }
+.progressBar{
+    /* border:2px solid red; */
+    width:1030px;
+}
 .avatar{
     display:flex;
+    box-sizing: border-box;
 }
 .avatarContainer{
     width:5rem;

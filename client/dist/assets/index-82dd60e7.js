@@ -1,4 +1,4 @@
-(function(){const d=document.createElement("link").relList;if(d&&d.supports&&d.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const r of t.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&n(r)}).observe(document,{childList:!0,subtree:!0});function s(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function n(e){if(e.ep)return;e.ep=!0;const t=s(e);fetch(e.href,t)}})();document.querySelector("#navbar").innerHTML=`
+(function(){const d=document.createElement("link").relList;if(d&&d.supports&&d.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const n of t.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&i(n)}).observe(document,{childList:!0,subtree:!0});function s(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=s(e);fetch(e.href,t)}})();document.querySelector("#navbar").innerHTML=`
 <nav>
   <div class="nav-logo">
     <img src="/images/logo.png" alt="logo">
@@ -25,7 +25,7 @@
     </div>
   </div>
 </nav>
-`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("https://type-battle.onrender.com",{transports:["websocket"]});let c=document.getElementById("nav-acc-btn");c.addEventListener("click",a=>{a.preventDefault(),window.location.href="/pages/signup.html"});let l=document.getElementById("nav-login-btn");l.addEventListener("click",a=>{a.preventDefault(),window.location.href="/pages/login.html"});let o=document.querySelector(".nav-logo");o.addEventListener("click",a=>{a.preventDefault(),window.location.href="./index.html"});let v=document.getElementById("app");function p(){return`
+`;document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");io("https://type-battle.onrender.com",{transports:["websocket"]});let m=document.getElementById("nav-acc-btn");m.addEventListener("click",a=>{a.preventDefault(),window.location.href="/pages/signup.html"});let b=document.getElementById("nav-login-btn");b.addEventListener("click",a=>{a.preventDefault(),window.location.href="/pages/login.html"});let h=document.querySelector(".nav-logo");h.addEventListener("click",a=>{a.preventDefault(),window.location.href="./index.html"});function g(){return io("https://type-battle.onrender.com",{transports:["websocket"]})}let f=document.getElementById("app"),o=g();function y(){return`
   <div id="race-global">
         <div id="race-global-body">
           <div id="race-logo">
@@ -57,100 +57,38 @@
         </div>
 
       </div>
-  `}v.innerHTML=`
+  `}function k(a,d,s,i){return`
+    <tr class="race-row">
+        <td class="progressBarCont">
+            <div class="progressBar">
+                <div id="avatar${i}" class="avatar avatar-self">
+                    <div class="nameContainer">
+                        <div class="client-name">${a}</div>
+                        <span class="client-label">${d}</span>
+                    </div>
+                    <div class="avatarContainer">
+                        <img width="100%" src=${s} alt="avatar">
+                    </div>
+                </div>                            
+            </div>
+        </td>
+        <td class="rankPanelCont">
+            <div class="rankPanel">
+                <div id="rank${i}">&nbsp;</div>
+                <div id=${i} class="rankWpm rankWpm-self">0 wpm</div>
+            </div>
+        </td>
+    </tr>
+    `}f.innerHTML=`
 <div id="race">
-${p()}
+${y()}
 </div>
-`;let i=document.getElementById("race"),m=document.getElementById("race-global-btn");m.addEventListener("click",a=>{i.innerHTML="",i.innerHTML=`
+`;let l=document.getElementById("race"),w=document.getElementById("race-global-btn");w.addEventListener("click",a=>{l.innerHTML="",l.innerHTML=`
   <div class="race-cont">
         <div class="race-status">The race is on. Type the text below:</div>
         <div class="race-body">
             <table>
-                <tbody>
-                    <tr class="race-row">
-                        <td class="progressBarCont">
-                            <div class="progressBar">
-                                <div class="avatar avatar-self">
-                                    <div class="nameContainer">
-                                        <div class="client-name">Guest</div>
-                                        <span class="client-label">(you)</span>
-                                    </div>
-                                    <div class="avatarContainer">
-                                        <img width="100%" src="../images/avatars/basic-blue.svg" alt="avatar">
-                                    </div>
-                                </div>                            
-                            </div>
-                        </td>
-                        <td class="rankPanelCont">
-                            <div class="rankPanel">
-                                <div class="rank">&nbsp;</div>
-                                <div class="rankWpm rankWpm-self">0 wpm</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="race-row">
-                        <td class="progressBarCont">
-                            <div class="progressBar">
-                                <div class="avatar avatar-self">
-                                    <div class="nameContainer">
-                                        <div class="client-name">Guest</div>
-                                        <span class="client-label">(you)</span>
-                                    </div>
-                                    <div class="avatarContainer">
-                                        <img width="100%" src="../images/avatars/basic-blue.svg" alt="avatar">
-                                    </div>
-                                </div>                            
-                            </div>
-                        </td>
-                        <td class="rankPanelCont">
-                            <div class="rankPanel">
-                                <div class="rank">&nbsp;</div>
-                                <div class="rankWpm rankWpm-self">0 wpm</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="race-row">
-                        <td class="progressBarCont">
-                            <div class="progressBar">
-                                <div class="avatar avatar-self">
-                                    <div class="nameContainer">
-                                        <div class="client-name">Guest</div>
-                                        <span class="client-label">(you)</span>
-                                    </div>
-                                    <div class="avatarContainer">
-                                        <img width="100%" src="../images/avatars/basic-blue.svg" alt="avatar">
-                                    </div>
-                                </div>                            
-                            </div>
-                        </td>
-                        <td class="rankPanelCont">
-                            <div class="rankPanel">
-                                <div class="rank">&nbsp;</div>
-                                <div class="rankWpm rankWpm-self">0 wpm</div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="race-row">
-                        <td class="progressBarCont">
-                            <div class="progressBar">
-                                <div class="avatar avatar-self">
-                                    <div class="nameContainer">
-                                        <div class="client-name">Guest</div>
-                                        <span class="client-label">(you)</span>
-                                    </div>
-                                    <div class="avatarContainer">
-                                        <img width="100%" src="../images/avatars/basic-blue.svg" alt="avatar">
-                                    </div>
-                                </div>                            
-                            </div>
-                        </td>
-                        <td class="rankPanelCont">
-                            <div class="rankPanel">
-                                <div class="rank">&nbsp;</div>
-                                <div class="rankWpm rankWpm-self">0 wpm</div>
-                            </div>
-                        </td>
-                    </tr>
+                <tbody id="tbody">
                 </tbody>
             </table>
         </div>
@@ -164,7 +102,7 @@ ${p()}
         </div>
         <button id="back-btn">Back to Main Menu</button>
     </div>
-  `,document.getElementById("back-btn").addEventListener("click",s=>{i.innerHTML="",window.location.href="/index.html"})});let u=document.getElementById("race-practice-btn");u.addEventListener("click",a=>{i.innerHTML="",i.innerHTML=`
+  `;let d,s=Math.floor(Math.random()*90);o.emit("user",{username:`Guest ${s}`,room:"guest"}),o.on("number of users",e=>{document.querySelector("#tbody").innerHTML="";for(let t=0;t<e.length;t++)document.querySelector("#tbody").innerHTML+=k(e[t].username,"you","../images/avatars/basic-brown.svg",t)}),o.on("content",e=>{console.log(e),d=e;let t=document.getElementById("ptag");t.innerText=e}),document.getElementById("ibox").addEventListener("input",e=>{let t=ibox.value;ibox.style.background="white",o.emit("type message",t),o.on("status",([n,c])=>{c==!1&&(ibox.style.background="red");let r=0,p=1;for(let u in n){document.getElementById(`${r}`).innerText=n[u].wpm+" wpm";let v=900/d.length*n[u].wpm;console.log(v),v<900?document.getElementById(`avatar${r}`).style.paddingLeft=v+"px":v>=900&&(document.getElementById(`avatar${r}`).style.paddingLeft="900px",document.getElementById(`rank${r}`).innerText=p++),r++}})}),document.getElementById("back-btn").addEventListener("click",e=>{l.innerHTML="",window.location.href="/index.html"})});let T=document.getElementById("race-practice-btn");T.addEventListener("click",a=>{l.innerHTML="",l.innerHTML=`
   <div class="race-cont">
   <div class="race-status">The race is on. Type the text below:</div>
   <div class="race-body">
@@ -204,7 +142,7 @@ ${p()}
   </div>
   <button id="back-btn">Back to Main Menu</button>
 </div>
-  `,document.getElementById("back-btn").addEventListener("click",s=>{i.innerHTML="",window.location.href="/index.html"})});let b=document.getElementById("race-friends-btn");b.addEventListener("click",a=>{window.location.href="../pages/friends.html"});let h=document.getElementById("create-acc-sec");h.innerHTML=`
+  `;let d;o.emit("user enter in room",{username:"Guest"}),o.on("content",i=>{console.log(i),d=i;let e=document.getElementById("ptag");e.innerText=i}),document.getElementById("ibox").addEventListener("input",i=>{let e=ibox.value,t=e.length,n=0,c=!0;ibox.style.background="white";for(let r=0;r<t;r++)e[r]!=d[r]?(ibox.style.background="red",c=!1):c==!0&&n++;document.querySelector(".rankWpm-self").innerText=n+" wpm"}),document.getElementById("back-btn").addEventListener("click",i=>{l.innerHTML="",window.location.href="/index.html"})});let E=document.getElementById("race-friends-btn");E.addEventListener("click",a=>{window.location.href="../pages/friends.html"});let x=document.getElementById("create-acc-sec");x.innerHTML=`
     <div id="create-acc">
       <div id="create-acc-img">
         <img src="/images/cars-sherrif.png" alt="sherriff">
@@ -215,7 +153,7 @@ ${p()}
       </div>
       <button id="create-acc-btn">Create Your Account</button>
     </div>
-`;let g=document.getElementById("leaderboard-sec");g.innerHTML+=`
+`;let B=document.getElementById("leaderboard-sec");B.innerHTML+=`
 <div id="leaderboard">
       <h1>LEADERBOARD</h1>
       <div id="leaderboard-menu">
@@ -304,7 +242,7 @@ ${p()}
         </div>
       </div>
     </div>
-`;let f=document.getElementById("footer-sec");f.innerHTML+=`
+`;let S=document.getElementById("footer-sec");S.innerHTML+=`
 <div id="footer">
     <div id="footer-body">
         <div id="footer-right">

@@ -122,10 +122,10 @@ let logo_btn = document.querySelector(".nav-logo")
   window.location.href="./index.html"
  })
  
- // -----------------------------SOCKET WORKING----------------------------------//
-// function connection(){
-//   let socket = io("http://localhost:8080",{transports:["websocket"]});
-//   return socket;
-// }
-// export default connection;
+//  -----------------------------SOCKET WORKING----------------------------------//
+function connection(){
+  let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
+  return socket;
+}
+export default connection;
 

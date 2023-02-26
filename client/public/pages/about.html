@@ -7,19 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            font: normal 90% "Lucida Sans Unicode",sans-serif;;
+        }
+        #top{
+            /* background-color: blue; */
+            background-image: linear-gradient(to top, #0059a7,#00c5fd);
+            padding: 0.5rem;
+        }
+        #top>*{
+            color: white;
+        }
+        .play:hover{
+            background-color: #00c5fd;
+            /* width: 8%; */
+            cursor: pointer;
+        }
+        .play{
+            width: 8%;
+        }
         #middle {
             padding: 1%;
             display: flex;
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
         }
 
         #left {
             width: 25%;
             margin: 1%;
         }
+        #left>h2+p{
+            text-align: justify;
+        }
 
+        #right>div:first-child{
+            margin: 2em 2em 16.6em;
+            /* border: 1px solid red; */
+        }
+        #bottom{
+            background-color: #007ec5;
+            padding: 1rem;
+
+        }
         #bottom>p {
             text-align: center;
+            color: #bbb;
+        }
+        a {
+            color:#f70;
+        }
+        #bottom a{
+            color: antiquewhite;
+            text-decoration: none;
+        }
+        #bottom a:hover{
+            color: #fff6ee;
+            text-decoration: underline;
+        }
+        .col{
+            color: blue;
+        }
+        .uline{
+            border-bottom: solid #bbb 1px;
         }
     </style>
 </head>
@@ -27,12 +76,12 @@
 <body>
     <div id="top">
         <h1>TypeBattle</h1>
-        <h4>Play the game</h4>
+        <h4 class="play">Play the game</h4>
     </div>
 
     <div id="middle">
         <div id="left">
-            <h2>About TypeBattle</h2>
+            <h2 class="col">About TypeBattle</h2>
             <p>The award-winning online typing competition, TypeBattle, allows people to race each-other by typing
                 quotes
                 from books, movies, and songs. It is the first multiplayer typing game on the web. <br>
@@ -55,17 +104,17 @@
             </p>
 
 
-            <p>Get Started</p>
+            <p> <a href="#"> Get Started</a></p>
 
-            <div id="awards">
-                <h3>Awards</h3>
+            <div id="awards" >
+                <h3 class="col uline">Awards</h3>
                 <div><img src="https://data.typeracer.com/public/images/pc_mag.gif" alt="img1"> <img
                         src="https://data.typeracer.com/public/images/mashup_awards.gif" alt="img2"></div>
             </div>
         </div>
         <div id="right">
             <div>
-                <h3>Video walkthrough</h3>
+                <h2 class="col">Video Walkthrough</h2>
 
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/9znLhbkV1Gs"
                     title="YouTube video player" frameborder="0"
@@ -74,7 +123,7 @@
 
             </div>
             <div>
-                <h3>Press Coverage</h3>
+                <h3 class="uline col" >Press Coverage</h3>
                 <p>TypeBattle has been covered in numerous online and print publications. Here is a selection of
                     articles:</p>
                 <p>
@@ -89,13 +138,14 @@
                     <li><a href="#">GeekSugar: The "Geek is chic" blog</a></li>
                 </ul>
                 </p>
+                Please contact <a href="#"> press@typebattle.com</a> for press inquiries.
             </div>
         </div>
 
     </div>
 
     <div id="bottom">
-        <p>© 2008-2023 TypeBattle Home - Terms of Service - Privacy Policy - Contact - Change Theme</p>
+        <p>© 2008-2023 TypeBattle <a href="#">Home</a>  - <a href="#">Terms of Service</a> - <a href="#">Privacy Policy</a> - <a href="#">Contact</a> - <a href="#">Change Theme</a></p>
     </div>
 </body>
 

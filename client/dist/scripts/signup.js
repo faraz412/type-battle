@@ -24,7 +24,7 @@ reg_form.addEventListener("submit",(event)=>{
 async function send_Reg_Req(obj){
     console.log(obj)
     try {
-        let url = baseURL+"/user/register_validate"
+        let url = baseURL+"/api/user/register_validate"
         let res = await fetch(url,{
             method:"POST",
             headers: {
@@ -71,7 +71,7 @@ otp_form.addEventListener("submit",(event)=>{
 async function user_Reg(user_Obj){
     // console.log(user_Obj)
     try {
-        let url = baseURL+"/user/register"
+        let url = baseURL+"/api/user/register"
         let res = await fetch(url,{
             method:"POST",
             headers: {

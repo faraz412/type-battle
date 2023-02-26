@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-
 let content=fetch('https://api.quotable.io/random')
     .then(res => res.text())
     .then(body => body);
@@ -18,7 +17,6 @@ function content_msg(){
     return content.content;
 }
 
-
 // // function content_check(char){
 // // if(content[i]==char){
 // //     i++;
@@ -31,7 +29,10 @@ function content_msg(){
 
 
 
+
+
 module.exports={
     content_msg,
     formatemessage
 }
+

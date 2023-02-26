@@ -1,7 +1,7 @@
 import '../style/signup.css'
-let app=document.getElementById("app");
+let createacc=document.getElementById("create-acc-sec");
 
-app.innerHTML+=`
+createacc.innerHTML=`
     <div id="create-acc">
       <div id="create-acc-img">
         <img src="/images/cars-sherrif.png" alt="sherriff">

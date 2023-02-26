@@ -106,14 +106,18 @@ To run this project, you will need to add the following environment variables to
 
 ## Screenshots
 
-![App Screenshot](https://i.imgur.com/NIW25IN.jpeg)
-![App Screenshot](https://i.imgur.com/gIZtuhv.jpeg)
-![App Screenshot](https://i.imgur.com/Gqs21cN.jpeg)
+![App Screenshot](https://i.imgur.com/LhQOBsU.jpeg)
+![App Screenshot](https://i.imgur.com/PfAyWy4.jpeg)
+![App Screenshot](https://i.imgur.com/loiArEj.jpeg)
 
 
 
 ## Demo
-https://pear-z5ta.onrender.com/
+https://type-battle.onrender.com/
 ## Authors
 
 - [@DanteHaxor](https://github.com/DanteHaxor)
+- [@Abhinav068](https://github.com/Abhinav068)
+- [@shanukajain](https://github.com/shanukajain)
+- [@faraz412](https://github.com/faraz412)
+- [@sarveshgupta1997](https://github.com/sarveshgupta1997)

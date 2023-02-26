@@ -29,7 +29,7 @@ async function loginFromDb(obj){
 
         if(res.status==200){
             alert(data.msg);
-            // console.log(data.token,data.user);
+            console.log(data.token,data.user);
             let token= data.token;
             let loggedUser= data.user;
             localStorage.setItem("token",token);

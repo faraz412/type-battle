@@ -140,6 +140,7 @@ raceGlobalBtn.addEventListener("click",(e)=>{
                 alert("you got "+k+" position");
                 k++;
                 window.location="../index.html";
+                break;
             }
             i++;
         }

@@ -23,7 +23,7 @@ adminrouter.post("/register",async(req,res)=>{
                 // console.log(password,hash);
                 let data=new UserModel({email,name,"password":hash,role:"admin"});
                 await data.save();  
-                res.status(200).send({"msg":"done"});
+                res.status(200).send({"msg":"Admin saved in db"});
             });
         }
     } catch (error) {
@@ -40,10 +40,14 @@ adminrouter.post("/register",async(req,res)=>{
                 res.status(409).send({"msg":"user not exits"})
             }else {
                 bcrypt.compare(password, data1[0].password, function(err, result) {
-                    let token=jwt.sign({
-                        "email":data1[0].email,"role":data1[0].role
-                      }, 'typebattle', { expiresIn: '1h' });
-                      res.status(200).send({"msg":"login successfull","adminToken":token});
+                    if (result) {
+                        let token=jwt.sign({
+                            "email":data1[0].email,"role":data1[0].role
+                          }, 'typebattle', { expiresIn: '1h' });
+                          res.status(200).send({"msg":"login successfull","adminToken":token});
+                    } else {
+                        res.status(401).send({"msg":"Wrong Credentials!"});
+                    }
                 });
             }
         } catch (error) {

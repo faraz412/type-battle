@@ -1,7 +1,7 @@
 import '../style/signup.css'
-let app=document.getElementById("app");
+let footer=document.getElementById("footer-sec");
 
-app.innerHTML+=`
+footer.innerHTML+=`
 <div id="footer">
     <div id="footer-body">
         <div id="footer-right">
@@ -13,7 +13,7 @@ app.innerHTML+=`
             <a href="">FAQ</a>
         </div>
         <div id="footer-left">
-            <button id="dark-mode-btn">Change Theme - Dark Mode</button>
+            <img src="../images/cars-footer.png" Dark Mode/>
         </div>
     </div>
 </div>

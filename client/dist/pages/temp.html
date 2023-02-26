@@ -108,6 +108,7 @@
                 <input  />
             </div>
         </div>
+        <button id="back-btn">Back to Main Menu</button>
     </div>
 
 
@@ -149,6 +150,35 @@
             </div>
         </div>
     </div>
+
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1> Chat</h1>
+            <!-- <a id="leave-btn">Go out</a> -->
+        </header>
+        <main class="chat-main">
+            <div class="chat-sidebar">
+            <h3> Room Name:</h3>
+            <h2 id="room-name"></h2>
+            <h3> Users</h3>
+            <ul id="users"></ul>
+            </div>
+            <div class="chat-messages"></div>
+        </main>
+        <div class="chat-form-container">
+            <form id="chat-form">
+            <input
+                id="msg"
+                type="text"
+                placeholder="Enter Message"
+                required
+                autocomplete="off"
+            />
+            <button class="btn"> Send</button>
+            </form>
+        </div>
+    </div>
+
     <!-- <table cellspacing="0" cellpadding="0" style="width: 100%;">
         <tbody>
             <tr>

@@ -121,10 +121,11 @@ let logo_btn = document.querySelector(".nav-logo")
   e.preventDefault();
   window.location.href="./index.html"
  })
+ 
+ // -----------------------------SOCKET WORKING----------------------------------//
+// function connection(){
+//   let socket = io("http://localhost:8080",{transports:["websocket"]});
+//   return socket;
+// }
+// export default connection;
 
-
-//  let btn= document.getElementById("race-global-btn")
-// btn.addEventListener("click",(e)=>{
-//   e.preventDefault();
-//   console.log("hi");
-// })

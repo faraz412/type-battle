@@ -13,17 +13,18 @@ TypeBattle is a multiplayer online browser-based typing game. In TypeBattle, pla
 
 ## Tech Stack
 
-**Client:** HTML, CSS, Javascript 
+**Client:** HTML, CSS, JavaScript 
 
-**Server:** Node, Express
+**Server:** Node.js, Express.js, Socket.io
 
+**Database:** MongoDB, Redis
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/DanteHaxor/acceptable-straw-3421
+  git clone https://github.com/faraz412/acceptable-straw-3421
 ```
 
 Go to the project directory

@@ -13,3 +13,7 @@ createacc.innerHTML=`
       <button id="create-acc-btn">Create Your Account</button>
     </div>
 `
+let caBtn=document.getElementById("create-acc-btn");
+caBtn.addEventListener("click",(e)=>{
+  window.location.href="./pages/signup.html";
+})

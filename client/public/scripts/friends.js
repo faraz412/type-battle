@@ -3,6 +3,10 @@ let friendsRace=document.getElementById("friends-sec");
 import connection from "../../main";
 let socket=connection();
 
+
+const urlParams= new URLSearchParams(window.location.search);
+const room=urlParams.get("room");
+
 function userRaceBar(name, tag, avatar,j){
     return `
     <tr class="race-row">
@@ -21,7 +25,7 @@ function userRaceBar(name, tag, avatar,j){
         </td>
         <td class="rankPanelCont">
             <div class="rankPanel">
-            <div id="rank${j}">&nbsp;</div>
+            <div id="rank${j}" class="ranks">&nbsp;</div>
             <div id=${j} class="rankWpm rankWpm-self">0 wpm</div>
             </div>
         </td>
@@ -88,14 +92,21 @@ friendsRace.innerHTML=`
   let backBtn=document.getElementById("back-btn");
 
   // --------------SOCKET WORKING------------------------//
+
+
   let checkmsg;
     let random=Math.floor(Math.random() * 90);
     let username="Guest "+`${random}`;
-  socket.emit("user",{username:"Guest "+`${random}`,"room":"guest"});
+  socket.emit("user",{username:"Guest "+`${random}`,"room": room });
   socket.on("number of users",(users)=>{
     document.querySelector("#tbody").innerHTML="";
     for(let j=0; j<users.length; j++){
-        document.querySelector("#tbody").innerHTML+=userRaceBar(users[j].username, "you", "../images/avatars/basic-brown.svg",j);
+        if(username==users[j].username){
+            document.querySelector("#tbody").innerHTML+=userRaceBar(users[j].username, "you", "../images/avatars/basic-brown.svg",j);
+        }else{
+            document.querySelector("#tbody").innerHTML+=userRaceBar(users[j].username, "other", "../images/avatars/basic-brown.svg",j);
+        }
+       
     }
   })
   socket.on("content",(msg)=>{
@@ -124,8 +135,11 @@ friendsRace.innerHTML=`
             if(padding<900) {
                 document.getElementById(`avatar${i}`).style.paddingLeft=padding+"px";
             }else if(padding>=900){
-                document.getElementById(`avatar${i}`).style.paddingLeft="900px";
-                document.getElementById(`rank${i}`).innerText=k++;
+                // document.getElementById(`avatar${i}`).style.paddingLeft="900px";
+                document.getElementById(`rank${i}`).innerText="rank "+k;
+                alert("you got "+k+" position")
+                k++;
+                window.location="../index.html";
             }
             i++;
         // console.log(raceObj)
@@ -138,6 +152,83 @@ friendsRace.innerHTML=`
     racebody.innerHTML="";
     window.location.href="/index.html";
   })
+
+//   -------------------CHAT------------------------------//
+
+const chatMessage=document.querySelector(".chat-messages");
+const roomName=document.getElementById("room-name");
+const userList=document.getElementById("users");
+const chatForm=document.getElementById("chat-form");
+
+
+// socket.emit("user",{username,room});
+
+socket.on("message",(msg)=>{
+    //console.log(msg);
+    outputMessage(msg);
+})
+
+socket.on("roomUsers",({room,users})=>{
+    outputRoomName(room);
+    outputRoomUsers(users);
+})
+
+chatForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+
+    let msg=e.target.elements.msg.value;
+    msg=msg.trim();
+
+    //console.log(msg);
+    if(!msg){
+        return false;
+    }
+
+    socket.emit("msg",msg);
+
+    e.target.elements.msg.value="";
+    e.target.elements.msg.focus();
+})
+
+
+function outputMessage(message){
+    const div=document.createElement("div");
+    div.classList.add("message");
+
+    const p=document.createElement("p");
+   p.classList.add("meta");
+    p.innerText=message.username+" ";
+    p.innerHTML+=`<span>${message.time}</span>`;
+
+    const para=document.createElement("p");
+    para.classList.add("text");
+    para.innerText=message.text;
+
+    div.append(p,para);
+    chatMessage.append(div);
+}
+
+function outputRoomName(room){
+    roomName.innerText=room;
+}
+
+function outputRoomUsers(users){
+    userList.innerHTML="";
+    users.forEach((user)=>{
+        const li=document.createElement("li");
+        li.innerText=user.username;
+
+        userList.append(li);
+    })
+}
+
+// document.getElementById("leave-btn").addEventListener('click',(e)=>{
+//     const leaveRoom=confirm("Are you sure?");
+
+//     if(leaveRoom){
+//         window.location.href="./index.html";
+//     }
+// })
 
 //   <tr class="race-row">
 //                         <td class="progressBarCont">

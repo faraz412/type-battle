@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
       //console.log(username,room);
       const user=userjoin(socket.id,username,room);//user store
       //console.log(user);
-
+      //console.log(user);
       if(user==""){
         socket.emit("roomFull","Maximum users have joined the race");
       }else{
@@ -58,7 +58,7 @@ io.on('connection', (socket) => {
           })
         socket.on("msg",(msg)=>{
             console.log(msg);
-        io.to(user.room).emit("chat message",formatemessage(username,msg));//message to all
+        io.to(user.room).emit("message",formatemessage(username,msg));//message to all
         })
         // io.to(user.room).emit("roomUsers",{room:user.room,user:getRoomuser(user.room)});
         socket.on('disconnect', () => {

@@ -352,6 +352,12 @@ hr{
     text-align: center;
     font-size: 16px;
 }
+.ranks{
+    text-align:center;
+    margin: auto;
+    color:rgb(13, 77, 13);
+    padding:7px;
+}
 .race-text-cont{
     /* border:1px solid black; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -500,6 +506,7 @@ hr{
 	margin-bottom: 15px;
 	border-radius: 5px;
 	overflow-wrap: break-word;
+    background-color: #11c1d4;
 }
 
 .chat-messages .message .meta {
@@ -559,3 +566,56 @@ float: right;
 /* #leave-btn{
     background-color: #120c07;
 } */
+
+/* ------------ROOm NO----------------- */
+
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: blue;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: blue;
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}

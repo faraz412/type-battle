@@ -87,9 +87,9 @@ function displayhof(arr) {
   });
 }
 
-let content=""
-//socket:-
-let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
+// let content=""
+// //socket:-
+// let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
 //friend join the room
 // socket.emit("user",{username,room});
 
@@ -127,5 +127,11 @@ function connection(){
   let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
   return socket;
 }
+
+// function connection(){
+//   let socket = io("http://localhost:8080/",{transports:["websocket"]});
+//   return socket;
+// }
+
 export default connection;
 

@@ -29,12 +29,15 @@ async function loginFromDb(obj){
 
         if(res.status==200){
             alert(data.msg);
-            // console.log(data.token,data.user);
+            console.log(data.token,data.user);
             let token= data.token;
             let loggedUser= data.user;
+            let loggedname=data.user.name;
+            localStorage.setItem("loggedname",loggedname);
             localStorage.setItem("token",token);
             localStorage.setItem("loggedUser",loggedUser);            
-            window.location.assign("https://type-battle.onrender.com/"); 
+            window.location.assign("https://type-battle.onrender.com/");
+            // window.location.assign("http://localhost:5173/");  
 
         }else if(res.status==409){
             alert(data.msg);

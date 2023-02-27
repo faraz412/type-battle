@@ -1,3 +1,4 @@
+import baseURL from './public/scripts/baseURL';
 import './style.css'
 
 
@@ -31,6 +32,7 @@ document.querySelector('#navbar').innerHTML = `
 `
 
 let loggedname=localStorage.getItem("loggedname");
+
 if(loggedname){
   document.getElementById("loggedname").innerText=loggedname;
   document.getElementById("nav-acc-btn").classList.add("div-hide");
@@ -40,6 +42,7 @@ if(loggedname){
   document.getElementById("nav-acc-btn").classList.remove("div-hide");
   document.getElementById("nav-login-btn").innerText="SIGN IN";
 }
+
 
 
 const latest_tbody=document.querySelector("#latest");
@@ -126,7 +129,22 @@ create_account_btn.addEventListener("click",(e)=>{
 let signin_btn = document.getElementById("nav-login-btn")
 signin_btn.addEventListener("click",(e)=>{
   e.preventDefault();
-  window.location.href="/pages/login.html"
+  if(signin_btn.innerText=="SIGN IN"){
+    window.location.href="/pages/login.html"
+  }else{
+    let token=localStorage.getItem("token");
+    fetch(baseURL+"/api/user/logout",{
+      headers:{
+        "Authorization":`${token}`,
+        "Content-type": "application/json"
+      },
+    }); 
+    localStorage.removeItem("loggedname");
+    localStorage.removeItem("token");
+    localStorage.removeItem("loggedUser");
+    alert("Log out Succesfull");
+    window.location.href="index.html";
+  }
 })
 
 let logo_btn = document.querySelector(".nav-logo")

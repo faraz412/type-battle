@@ -127,6 +127,7 @@ friendsRace.innerHTML=`
         if(flag==false){
             ibox.style.background="red";
         }
+        console.log(raceObj);
         let i=0, k=1;
         for(let x in raceObj){
             document.getElementById(`${i}`).innerText=raceObj[x]["wpm"]+" wpm";
@@ -140,7 +141,7 @@ friendsRace.innerHTML=`
                 alert("you got "+k+" position");
                 k++;
                 window.location="../index.html";
-                break;
+                // break;
             }
             i++;
         // console.log(raceObj)
@@ -169,8 +170,9 @@ socket.on("message",(msg)=>{
     outputMessage(msg);
 })
 
-socket.on("roomUsers",({room,users})=>{
-    outputRoomName(room);
+socket.on("roomUsers",(users)=>{
+    console.log(users);
+    outputRoomName(users);
     outputRoomUsers(users);
 })
 
@@ -209,8 +211,8 @@ function outputMessage(message){
     chatMessage.append(div);
 }
 
-function outputRoomName(room){
-    roomName.innerText=room;
+function outputRoomName(users){
+    roomName.innerText=users[0].room;
 }
 
 function outputRoomUsers(users){

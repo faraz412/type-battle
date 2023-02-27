@@ -3,7 +3,7 @@ let users=[];
 function userjoin(id,username,room){
     let user={id,username,room}
    
-    if(user.length==4){
+    if(user.length>=4){
         return "";
     }
     users.push(user);

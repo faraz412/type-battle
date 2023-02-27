@@ -48,10 +48,12 @@ io.on('connection', (socket) => {
 
         socket.join(user.room);//join the room
         socket.emit("message",formatemessage(user.username,"welcome to type battle"));// individual message
-       socket.emit("roomNo",getRoomuser());
+       socket.emit("number of users",getRoomuser());
+       socket.emit("roomUsers",getRoomuser());
         socket.emit("content",content_msg(user.username));
         //brodcast to other user
             // socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has join the race`))// message to all except me
+            socket.broadcast.to(user.room).emit("number of users",getRoomuser());
             io.to(user.room).emit("roomUsers",getRoomuser());
             socket.on("type message",(char)=>{
               socket.emit("status",content_check(char,user.username));

@@ -58,7 +58,7 @@ function userRaceBar(name, tag, avatar,j){
         </td>
         <td class="rankPanelCont">
             <div class="rankPanel">
-                <div id="rank${j}">&nbsp;</div>
+                <div id="rank${j}" class="ranks">&nbsp;</div>
                 <div id=${j} class="rankWpm rankWpm-self">0 wpm</div>
             </div>
         </td>
@@ -89,7 +89,7 @@ raceGlobalBtn.addEventListener("click",(e)=>{
         </div>
         <div class="race-text-cont">
             <div class="given-text">
-                <p id="ptag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates labore explicabo nobis pariatur, esse molestiae recusandae debitis distinctio nisi illum nostrum doloribus. Et nesciunt quis, quod error maiores quisquam deleniti!</p>
+                <p id="ptag"></p>
             </div>
             <div class="input-text">
                 <input id="ibox"  />
@@ -136,8 +136,11 @@ raceGlobalBtn.addEventListener("click",(e)=>{
             if(padding<900) {
                 document.getElementById(`avatar${i}`).style.paddingLeft=padding+"px";
             }else if(padding>=900){
-                document.getElementById(`avatar${i}`).style.paddingLeft="900px";
-                document.getElementById(`rank${i}`).innerText=k++;
+                document.getElementById(`rank${i}`).innerText="rank "+k;
+                alert("you got "+k+" position");
+                k++;
+                window.location="../index.html";
+                break;
             }
             i++;
         }
@@ -249,7 +252,7 @@ racepracticeBtn.addEventListener("click",(e)=>{
 //------------------RACE Friends------------------------//
 let racefriendsBtn=document.getElementById("race-friends-btn");
 racefriendsBtn.addEventListener("click",(e)=>{
-    window.location.href="../pages/friends.html";
+    window.location.href="../pages/roomNo.html";
 })
 
 // let socket = io("http://localhost:8080",{transports:["websocket"]});

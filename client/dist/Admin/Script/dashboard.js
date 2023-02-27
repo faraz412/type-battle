@@ -20,27 +20,29 @@ async function getdata(){
     displaydata(data)
 }
 getdata()
-function displaydata(data){
-    data.forEach((el)=>{
-        let tr=document.createElement("tr")
-        let trcontent=`
-            <td>${el.title}</td>
-            <td>${el._id}</td>
-            <td>${el.price}</td>
-            <td class="success">Available</td>
-            <td class="danger">details</td>                
-        `
-        tr.innerHTML=trcontent;
-        document.querySelector("tbody").append(tr)
-    })
+
+
+// function displaydata(data){
+//     data.forEach((el)=>{
+//         let tr=document.createElement("tr")
+//         let trcontent=`
+//             <td>${el.name}</td>
+//             <td>${el.speed}</td>
+//             <td>${el.date}</td>
+//             <td class="success">Available</td>
+//             <td class="danger">details</td>                
+//         `
+//         tr.innerHTML=trcontent;
+//         document.querySelector("tbody").append(tr)
+//     })
     
-}
-let showall=document.querySelector(".showall")
-    showall.addEventListener("click",()=>{
-    getalldata()
-})
-async function getalldata(){
-    let res = await fetch("https://639b1b94d5141501974b716f.mockapi.io/AddCart");
-	let data = await res.json();
-    displaydata(data)
-}
+// }
+// let showall=document.querySelector(".showall")
+//     showall.addEventListener("click",()=>{
+//     getalldata()
+// })
+// async function getalldata(){
+//     let res = await fetch("https://639b1b94d5141501974b716f.mockapi.io/AddCart");
+// 	let data = await res.json();
+//     displaydata(data)
+// }

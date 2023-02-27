@@ -89,7 +89,7 @@ raceGlobalBtn.addEventListener("click",(e)=>{
         </div>
         <div class="race-text-cont">
             <div class="given-text">
-                <p id="ptag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates labore explicabo nobis pariatur, esse molestiae recusandae debitis distinctio nisi illum nostrum doloribus. Et nesciunt quis, quod error maiores quisquam deleniti!</p>
+                <p id="ptag"></p>
             </div>
             <div class="input-text">
                 <input id="ibox"  />

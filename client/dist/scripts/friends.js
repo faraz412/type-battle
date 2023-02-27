@@ -170,7 +170,7 @@ socket.on("message",(msg)=>{
     outputMessage(msg);
 })
 
-socket.on("roomUsers",(users)=>{
+socket.on("number of users",(users)=>{
     console.log(users);
     outputRoomName(users);
     outputRoomUsers(users);

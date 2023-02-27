@@ -106,6 +106,7 @@ raceGlobalBtn.addEventListener("click",(e)=>{
   socket.emit("user",{username:"Guest "+`${random}`,"room":"guest"});
   socket.on("number of users",(users)=>{
     document.querySelector("#tbody").innerHTML="";
+    console.log(users);
     for(let j=0; j<users.length; j++){
         document.querySelector("#tbody").innerHTML+=userRaceBar(users[j].username, "you", "../images/avatars/basic-brown.svg",j);
     }

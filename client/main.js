@@ -153,7 +153,7 @@ let logo_btn = document.querySelector(".nav-logo")
   window.location.href="./index.html"
  })
  
- //-----------------------------SOCKET WORKING----------------------------------//
+//  -----------------------------SOCKET WORKING----------------------------------//
 function connection(){
   let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
   return socket;

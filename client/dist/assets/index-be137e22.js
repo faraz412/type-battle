@@ -7,7 +7,7 @@
       <li><a href="">Pit Stop</a></li>
       <li><a href="">Updates</a></li>
       <li><a href="">Discord</a></li>
-      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/public/about.html">About</a></li>
       <li><a href="">Merch</a></li>
   </div>
   <div id="nav-user">
@@ -25,7 +25,7 @@
     </div>
   </div>
 </nav>
-`;let u=localStorage.getItem("loggedname");u?(document.getElementById("loggedname").innerText=u,document.getElementById("nav-acc-btn").classList.add("div-hide"),document.getElementById("nav-login-btn").innerText="LOG OUT"):(document.getElementById("loggedname").innerText="Guest",document.getElementById("nav-acc-btn").classList.remove("div-hide"),document.getElementById("nav-login-btn").innerText="SIGN IN");document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");let b=document.getElementById("nav-acc-btn");b.addEventListener("click",d=>{d.preventDefault(),window.location.href="/pages/signup.html"});let p=document.getElementById("nav-login-btn");p.addEventListener("click",d=>{if(d.preventDefault(),p.innerText=="SIGN IN")window.location.href="/pages/login.html";else{let a=localStorage.getItem("token");fetch(g+"/api/user/logout",{headers:{Authorization:`${a}`,"Content-type":"application/json"}}),localStorage.removeItem("loggedname"),localStorage.removeItem("token"),localStorage.removeItem("loggedUser"),alert("Log out Succesfull"),window.location.href="index.html"}});let y=document.querySelector(".nav-logo");y.addEventListener("click",d=>{d.preventDefault(),window.location.href="./index.html"});function f(){return io("https://type-battle.onrender.com",{transports:["websocket"]})}let w=document.getElementById("app"),o=f();function E(){return`
+`;let u=localStorage.getItem("loggedname");u?(document.getElementById("loggedname").innerText=u,document.getElementById("nav-acc-btn").classList.add("div-hide"),document.getElementById("nav-login-btn").innerText="LOG OUT"):(document.getElementById("loggedname").innerText="Guest",document.getElementById("nav-acc-btn").classList.remove("div-hide"),document.getElementById("nav-login-btn").innerText="SIGN IN");document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");let b=document.getElementById("nav-acc-btn");b.addEventListener("click",d=>{d.preventDefault(),window.location.href="/pages/signup.html"});let p=document.getElementById("nav-login-btn");p.addEventListener("click",d=>{if(d.preventDefault(),p.innerText=="SIGN IN")window.location.href="/pages/login.html";else{let a=localStorage.getItem("token");fetch(g+"/api/user/logout",{headers:{Authorization:`${a}`,"Content-type":"application/json"}}),localStorage.removeItem("loggedname"),localStorage.removeItem("token"),localStorage.removeItem("loggedUser"),alert("Log out Succesfull"),window.location.href="index.html"}});let y=document.querySelector(".nav-logo");y.addEventListener("click",d=>{d.preventDefault(),window.location.href="../index.html"});function f(){return io("https://type-battle.onrender.com",{transports:["websocket"]})}let w=document.getElementById("app"),o=f();function E(){return`
   <div id="race-global">
         <div id="race-global-body">
           <div id="race-logo">
@@ -186,31 +186,31 @@ ${E()}
             <td>1</td>
             <td>Shanuka</td>
             <td>120 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
             <td>2</td>
             <td>Abhay</td>
             <td>114 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
             <td>3</td>
             <td>Sarvesh</td>
             <td>109 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
             <td>4</td>
             <td>Abhinav</td>
             <td>106 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
           <td>5</td>
           <td>Faraz</td>
           <td>103 wpm</td>
-          <td>1 day ago</td>
+          <td>1 Month ago</td>
           </tr>
         <!-- Append -->
         </tbody>
@@ -263,31 +263,31 @@ ${E()}
                 <td>1</td>
                 <td>Shanuka</td>
                 <td>120 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
                 <td>2</td>
                 <td>Abhay</td>
                 <td>114 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>Sarvesh</td>
                 <td>109 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>Abhinav</td>
                 <td>106 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
               <td>5</td>
               <td>Faraz</td>
               <td>103 wpm</td>
-              <td>1 day ago</td>
+              <td>1 Month ago</td>
               </tr>
             <!-- Append -->
             </tbody>

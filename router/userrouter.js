@@ -66,7 +66,7 @@ userrouter.post("/login",async(req,res)=>{
     try {
         let data=await UserModel.findOne({"email":email});
         if(!data){
-            res.status(409).send({"msg":"User does not exits."})
+            res.status(409).send({"msg":"User does not exits. Please register!"})
         }else if(data){
             let data1=await BlockuserModel.findOne({"user_id":data.id});
             if(data1){

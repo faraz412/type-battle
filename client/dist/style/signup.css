@@ -4,10 +4,15 @@
     font-family: sans-serif;
 }
 
+#login,#registration{
+    margin-top:5rem;
+}
+
 .registration h2, #login h2{
     width: 28%;
     padding: 50px 0px 17px 0px;
     margin: auto;
+    color:white;
 }
 
 .registration form , #login form {
@@ -571,21 +576,20 @@ float: right;
 
 .join-container {
 	max-width: 500px;
-	margin: 80px auto;
-	color: #fff;
+	margin: 160px auto;
+	color: black;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 25%);
 }
 
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: blue;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	background: #F4EFDF;
 }
 
 .join-main {
 	padding: 30px 40px;
-	background: blue;
+	background: #F4EFDF;
 }
 
 .join-main p {
@@ -618,4 +622,6 @@ float: right;
 .join-main .btn {
 	margin-top: 20px;
 	width: 100%;
+    background-color: rgb(95, 123, 104);
+    color: #fff;
 }

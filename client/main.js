@@ -11,7 +11,7 @@ document.querySelector('#navbar').innerHTML = `
       <li><a href="">Pit Stop</a></li>
       <li><a href="">Updates</a></li>
       <li><a href="">Discord</a></li>
-      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/public/about.html">About</a></li>
       <li><a href="">Merch</a></li>
   </div>
   <div id="nav-user">
@@ -150,7 +150,7 @@ signin_btn.addEventListener("click",(e)=>{
 let logo_btn = document.querySelector(".nav-logo")
  logo_btn.addEventListener("click",(e)=>{
   e.preventDefault();
-  window.location.href="./index.html"
+  window.location.href="../index.html"
  })
  
 //  -----------------------------SOCKET WORKING----------------------------------//

@@ -141,7 +141,7 @@ friendsRace.innerHTML=`
                 alert("you got "+k+" position");
                 k++;
                 window.location="../index.html";
-                // break;
+                break;
             }
             i++;
         // console.log(raceObj)

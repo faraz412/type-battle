@@ -34,31 +34,31 @@ lb.innerHTML+=`
             <td>1</td>
             <td>Shanuka</td>
             <td>120 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
             <td>2</td>
             <td>Abhay</td>
             <td>114 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
             <td>3</td>
             <td>Sarvesh</td>
             <td>109 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
             <td>4</td>
             <td>Abhinav</td>
             <td>106 wpm</td>
-            <td>1 day ago</td>
+            <td>1 Month ago</td>
           </tr>
           <tr>
           <td>5</td>
           <td>Faraz</td>
           <td>103 wpm</td>
-          <td>1 day ago</td>
+          <td>1 Month ago</td>
           </tr>
         <!-- Append -->
         </tbody>
@@ -115,31 +115,31 @@ document.getElementById("latest-scores").addEventListener("click",(e)=>{
                 <td>1</td>
                 <td>Shanuka</td>
                 <td>120 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
                 <td>2</td>
                 <td>Abhay</td>
                 <td>114 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>Sarvesh</td>
                 <td>109 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>Abhinav</td>
                 <td>106 wpm</td>
-                <td>1 day ago</td>
+                <td>1 Month ago</td>
               </tr>
               <tr>
               <td>5</td>
               <td>Faraz</td>
               <td>103 wpm</td>
-              <td>1 day ago</td>
+              <td>1 Month ago</td>
               </tr>
             <!-- Append -->
             </tbody>

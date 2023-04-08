@@ -1,29 +1,5 @@
 
-// import navbar from "./navbar.js"
 import baseURL from "./baseURL.js"
-// document.getElementById("navbar").innerHTML=navbar();
-
-// getUserName();
-// async function getUserName(){
-//     try {
-//         let url = baseURL+"/username"
-//         let res = await fetch(url,{
-//             headers: {
-//                 "token":token
-//             }
-//         });
-//         let data = await res.json();
-//         if(data.user){
-//             localStorage.setItem("loggedUser",data.user)
-//         }else{
-//             localStorage.setItem("loggedUser","Guest")
-//         }
-        
-//     } catch (error) {
-//         alert(error.message)
-//     }
-// }
-
 let form = document.querySelector("form");
 form.addEventListener("submit",(event)=>{       
     event.preventDefault();

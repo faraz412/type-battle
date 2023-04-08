@@ -4,23 +4,22 @@ const bcrypt=require("bcrypt");
 const jwt=require("jsonwebtoken");
 const adminrouter=express.Router();
 
+// Get Base Route
 adminrouter.get("/",(req,res)=>{
     res.send("admin Router")
 })
+
+// Get Register Route
 adminrouter.post("/register",async(req,res)=>{
     let {name,email,password}=req.body;
     // console.log(email,name,password);
     try {
         let data1=await UserModel.find({"email":email});
-        // console.log(data1);
         if(data1.length!=0){
             res.status(409).send({"msg":"admin already exits"})
         }else{
-            // console.log(password);
             bcrypt.hash(password,5,async function(err, hash) {
-                // Store hash in your password DB.
                 pass=hash
-                // console.log(password,hash);
                 let data=new UserModel({email,name,"password":hash,role:"admin"});
                 await data.save();  
                 res.status(200).send({"msg":"Admin saved in db"});
@@ -32,6 +31,7 @@ adminrouter.post("/register",async(req,res)=>{
     }
     })
 
+// Get Login Route
     adminrouter.post("/login",async(req,res)=>{
         let {email,password}=req.body;
         try {
@@ -63,6 +63,8 @@ adminrouter.post("/register",async(req,res)=>{
             res.status(200).send({"msg":"user has been blocked"})
             })
 
+            
+// Get Read Route
 adminrouter.get("/read",async(req,res)=>{
     let data=await UserModel.find();
     res.status(200).send(data);

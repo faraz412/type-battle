@@ -11,6 +11,7 @@ let res=fetch('https://api.quotable.io/random')
 let i=0;
 const moment=require("moment");
 
+// Formating Message
 function formatemessage(username,text){
     return{
         username,
@@ -18,14 +19,14 @@ function formatemessage(username,text){
         time: moment().format("h:mm a")
     }
 }
+
+// WPM update
 function content_msg(username){
     raceObj[username]={"wpm":0};
-    //console.log(typeof(content))
     return content;
 }
-
+// wpm increasing
 function content_check(value,user){
-    // console.log(user);
     let wpm=0;
     let flag=true;
     for(let i=0; i<value.length; i++){
@@ -39,13 +40,11 @@ function content_check(value,user){
         }
     }
     raceObj[user]["wpm"]=wpm;
-// console.log(raceObj)
     ;    return [raceObj,flag];
 }
 
 function resetuser(user){
     delete raceObj[user];
-    // raceObj[user]={"wpm":0};
 }
 
 

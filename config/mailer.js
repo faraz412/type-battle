@@ -1,9 +1,12 @@
 const nodemailer = require("nodemailer");
 const otpGenerator = require('otp-generator')
 
+
+// Generating OTP
 const otpvalidator=(usermail)=>{
     const OTP = otpGenerator.generate(4, { upperCaseAlphabets: false, specialChars: false ,lowerCaseAlphabets:false ,digits:true});
 
+// Sending Mail
 const transporter = nodemailer.createTransport({
     service: 'gmail',
   auth: {

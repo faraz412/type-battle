@@ -35,7 +35,7 @@ async function loginFromDb(obj){
             let loggedname=data.user.name;
             localStorage.setItem("loggedname",loggedname);
             localStorage.setItem("token",token);
-            localStorage.setItem("loggedUser",loggedUser);            
+            localStorage.setItem("loggedUser",JSON.stringify(loggedUser));
             window.location.assign("https://type-battle.onrender.com/");
             // window.location.assign("http://localhost:5173/");  
 

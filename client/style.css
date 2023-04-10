@@ -110,3 +110,8 @@ nav{
     padding: 5px 15px;
     color: white;
 }
+@media (min-width: 200px) and (max-width: 599px) {
+    body{
+        background-repeat: no-repeat;
+    }
+}

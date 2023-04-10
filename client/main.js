@@ -1,7 +1,7 @@
 import baseURL from './public/scripts/baseURL';
 import './style.css'
 
-
+// Navbar import
 document.querySelector('#navbar').innerHTML = `
 <nav>
   <div class="nav-logo">
@@ -30,6 +30,8 @@ document.querySelector('#navbar').innerHTML = `
   </div>
 </nav>
 `
+
+// get user from localStorage
 let loggedname=localStorage.getItem("loggedname");
 let loggedUser=JSON.parse(localStorage.getItem("loggedUser"));
 console.log(loggedUser)

@@ -54,6 +54,7 @@ const latest_tbody=document.querySelector("#latest");
 const myscores_tbody=document.querySelector("#my-scores");
 const hof_tbody=document.querySelector("#hof");
 
+// Display Latest scores
 function displayLatest(arr) {
   latest_tbody.innerHTML="";
   arr.forEach(function(elem,index){
@@ -72,6 +73,7 @@ function displayLatest(arr) {
   });
 }
 
+// Display users scores
 function displayMyscores(arr) {
   myscores_tbody.innerHTML="";
   arr.forEach(function(elem,index){

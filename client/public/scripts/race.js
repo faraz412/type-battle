@@ -4,9 +4,10 @@ let app=document.getElementById("app");
 import connection from '../../main';
 let socket=connection();
 
-
 import baseURL from "./baseURL.js"
 
+
+// Display main content
 function mainContent(){
   return `
   <div id="race-global">
@@ -43,6 +44,7 @@ function mainContent(){
   `
 }
 
+// Display userRaceBar
 function userRaceBar(name, tag, avatar,j){
     return `
     <tr class="race-row">

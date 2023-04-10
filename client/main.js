@@ -32,6 +32,8 @@ document.querySelector('#navbar').innerHTML = `
 `
 
 let loggedname=localStorage.getItem("loggedname");
+let loggedname=JSON.parse(localStorage.getItem("loggedUser"));
+console.log(loggedUser)
 
 if(loggedname){
   document.getElementById("loggedname").innerText=loggedname;

@@ -159,15 +159,15 @@ let logo_btn = document.querySelector(".nav-logo")
  })
  
 //  -----------------------------SOCKET WORKING----------------------------------//
-// function connection(){
-//   let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
-//   return socket;
-// }
-
 function connection(){
-  let socket = io("http://localhost:8080/",{transports:["websocket"]});
+  let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
   return socket;
 }
+
+// function connection(){
+//   let socket = io("http://localhost:8080/",{transports:["websocket"]});
+//   return socket;
+// }
 
 export default connection;
 

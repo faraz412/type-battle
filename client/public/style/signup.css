@@ -60,6 +60,55 @@ hr{
     margin: 12px 0;
 }
 
+@media (min-width: 200px) and (max-width: 499px) {
+    .registration form, #login form {
+        width: auto;
+    }
+    #race-pvt {
+        flex-direction:column ;
+    }
+    #create-acc {
+        flex-direction: column;
+        align-items: unset !important;
+        padding: 10px 13px !important;
+    }
+    #create-acc-text{
+        width: 23%;
+    }
+    #create-acc-text p{
+        margin: 10px 0;
+    }
+    #race-global-body {
+        width: 23%;
+        flex-direction: column;
+    }
+    #race-logo>img {
+        width: unset !important;
+    }
+    #race-global-text{
+        margin-top: 10px;
+    }
+    #race-global-text h1,#race-global-text p{
+        margin-top: 5px;
+    }
+    #race-friends{
+        background-image: unset !important;
+        margin-top: 14px;
+    }
+    #race-friends p{
+        width: 50%;
+        margin-top: 10px;
+    }
+    #leaderboard {
+        width: unset !important;    
+    }
+    #leaderboard-body table {
+        width: 20rem !important;
+        margin-left: 5px;
+    }
+}
+
+
 /* --------------------RACE--------------------- */
 
 #race{

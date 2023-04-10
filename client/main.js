@@ -32,7 +32,7 @@ document.querySelector('#navbar').innerHTML = `
 `
 
 let loggedname=localStorage.getItem("loggedname");
-let loggedname=JSON.parse(localStorage.getItem("loggedUser"));
+let loggedUser=JSON.parse(localStorage.getItem("loggedUser"));
 console.log(loggedUser)
 
 if(loggedname){

@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))n(t);new MutationObserver(t=>{for(const e of t)if(e.type==="childList")for(const i of e.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&n(i)}).observe(document,{childList:!0,subtree:!0});function l(t){const e={};return t.integrity&&(e.integrity=t.integrity),t.referrerPolicy&&(e.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?e.credentials="include":t.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function n(t){if(t.ep)return;t.ep=!0;const e=l(t);fetch(t.href,e)}})();let g="https://type-battle.onrender.com";document.querySelector("#navbar").innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))n(t);new MutationObserver(t=>{for(const e of t)if(e.type==="childList")for(const i of e.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&n(i)}).observe(document,{childList:!0,subtree:!0});function l(t){const e={};return t.integrity&&(e.integrity=t.integrity),t.referrerPolicy&&(e.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?e.credentials="include":t.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function n(t){if(t.ep)return;t.ep=!0;const e=l(t);fetch(t.href,e)}})();let p="https://type-battle.onrender.com";document.querySelector("#navbar").innerHTML=`
 <nav>
   <div class="nav-logo">
     <img src="/images/logo.png" alt="logo">
@@ -25,7 +25,7 @@
     </div>
   </div>
 </nav>
-`;let u=localStorage.getItem("loggedname");u?(document.getElementById("loggedname").innerText=u,document.getElementById("nav-acc-btn").classList.add("div-hide"),document.getElementById("nav-login-btn").innerText="LOG OUT"):(document.getElementById("loggedname").innerText="Guest",document.getElementById("nav-acc-btn").classList.remove("div-hide"),document.getElementById("nav-login-btn").innerText="SIGN IN");document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");let b=document.getElementById("nav-acc-btn");b.addEventListener("click",d=>{d.preventDefault(),window.location.href="/pages/signup.html"});let p=document.getElementById("nav-login-btn");p.addEventListener("click",d=>{if(d.preventDefault(),p.innerText=="SIGN IN")window.location.href="/pages/login.html";else{let a=localStorage.getItem("token");fetch(g+"/api/user/logout",{headers:{Authorization:`${a}`,"Content-type":"application/json"}}),localStorage.removeItem("loggedname"),localStorage.removeItem("token"),localStorage.removeItem("loggedUser"),alert("Log out Succesfull"),window.location.href="index.html"}});let y=document.querySelector(".nav-logo");y.addEventListener("click",d=>{d.preventDefault(),window.location.href="../index.html"});function f(){return io("https://type-battle.onrender.com",{transports:["websocket"]})}let w=document.getElementById("app"),o=f();function E(){return`
+`;let u=localStorage.getItem("loggedname"),b=JSON.parse(localStorage.getItem("loggedUser"));console.log(b);u?(document.getElementById("loggedname").innerText=u,document.getElementById("nav-acc-btn").classList.add("div-hide"),document.getElementById("nav-login-btn").innerText="LOG OUT"):(document.getElementById("loggedname").innerText="Guest",document.getElementById("nav-acc-btn").classList.remove("div-hide"),document.getElementById("nav-login-btn").innerText="SIGN IN");document.querySelector("#latest");document.querySelector("#my-scores");document.querySelector("#hof");let y=document.getElementById("nav-acc-btn");y.addEventListener("click",d=>{d.preventDefault(),window.location.href="/pages/signup.html"});let g=document.getElementById("nav-login-btn");g.addEventListener("click",d=>{if(d.preventDefault(),g.innerText=="SIGN IN")window.location.href="/pages/login.html";else{let a=localStorage.getItem("token");fetch(p+"/api/user/logout",{headers:{Authorization:`${a}`,"Content-type":"application/json"}}),localStorage.removeItem("loggedname"),localStorage.removeItem("token"),localStorage.removeItem("loggedUser"),alert("Log out Succesfull"),window.location.href="index.html"}});let f=document.querySelector(".nav-logo");f.addEventListener("click",d=>{d.preventDefault(),window.location.href="../index.html"});function w(){return io("https://type-battle.onrender.com",{transports:["websocket"]})}let E=document.getElementById("app"),o=w();function k(){return`
   <div id="race-global">
         <div id="race-global-body">
           <div id="race-logo">
@@ -57,7 +57,7 @@
         </div>
 
       </div>
-  `}function k(d,a,l,n){return`
+  `}function B(d,a,l,n){return`
     <tr class="race-row">
         <td class="progressBarCont">
             <div class="progressBar">
@@ -79,11 +79,11 @@
             </div>
         </td>
     </tr>
-    `}w.innerHTML=`
+    `}E.innerHTML=`
 <div id="race">
-${E()}
+${k()}
 </div>
-`;let c=document.getElementById("race"),B=document.getElementById("race-global-btn");B.addEventListener("click",d=>{c.innerHTML="",c.innerHTML=`
+`;let c=document.getElementById("race"),I=document.getElementById("race-global-btn");I.addEventListener("click",d=>{c.innerHTML="",c.innerHTML=`
   <div class="race-cont">
         <div class="race-status">The race is on. Type the text below:</div>
         <div class="race-body">
@@ -102,7 +102,7 @@ ${E()}
         </div>
         <button id="back-btn">Back to Main Menu</button>
     </div>
-  `;let a,l=Math.floor(Math.random()*90);o.emit("user",{username:`Guest ${l}`,room:"guest"}),o.on("number of users",t=>{document.querySelector("#tbody").innerHTML="",console.log(t);for(let e=0;e<t.length;e++)document.querySelector("#tbody").innerHTML+=k(t[e].username,"you","../images/avatars/basic-brown.svg",e)}),o.on("content",t=>{console.log(t),a=t;let e=document.getElementById("ptag");e.innerText=t}),document.getElementById("ibox").addEventListener("input",t=>{let e=ibox.value;ibox.style.background="white",o.emit("type message",e),o.on("status",([i,s])=>{s==!1&&(ibox.style.background="red");let r=0,v=1;for(let h in i){document.getElementById(`${r}`).innerText=i[h].wpm+" wpm";let m=900/a.length*i[h].wpm;if(console.log(m),m<900)document.getElementById(`avatar${r}`).style.paddingLeft=m+"px";else if(m>=900){document.getElementById(`rank${r}`).innerText="rank "+v,alert("you got "+v+" position"),v++,window.location="../index.html";break}r++}})}),document.getElementById("back-btn").addEventListener("click",t=>{c.innerHTML="",window.location.href="/index.html"})});let I=document.getElementById("race-practice-btn");I.addEventListener("click",d=>{c.innerHTML="",c.innerHTML=`
+  `;let a,l=Math.floor(Math.random()*90);o.emit("user",{username:`Guest ${l}`,room:"guest"}),o.on("number of users",t=>{document.querySelector("#tbody").innerHTML="",console.log(t);for(let e=0;e<t.length;e++)document.querySelector("#tbody").innerHTML+=B(t[e].username,"you","../images/avatars/basic-brown.svg",e)}),o.on("content",t=>{console.log(t),a=t;let e=document.getElementById("ptag");e.innerText=t}),document.getElementById("ibox").addEventListener("input",t=>{let e=ibox.value;ibox.style.background="white",o.emit("type message",e),o.on("status",([i,s])=>{s==!1&&(ibox.style.background="red");let r=0,v=1;for(let h in i){document.getElementById(`${r}`).innerText=i[h].wpm+" wpm";let m=900/a.length*i[h].wpm;if(console.log(m),m<900)document.getElementById(`avatar${r}`).style.paddingLeft=m+"px";else if(m>=900){document.getElementById(`rank${r}`).innerText="rank "+v,alert("you got "+v+" position"),v++,window.location="../index.html";break}r++}})}),document.getElementById("back-btn").addEventListener("click",t=>{c.innerHTML="",window.location.href="/index.html"})});let T=document.getElementById("race-practice-btn");T.addEventListener("click",d=>{c.innerHTML="",c.innerHTML=`
   <div class="race-cont">
   <div class="race-status">The race is on. Type the text below:</div>
   <div class="race-body">
@@ -142,7 +142,7 @@ ${E()}
   </div>
   <button id="back-btn">Back to Main Menu</button>
 </div>
-  `;let a;o.emit("user enter in room",{username:"Guest"}),o.on("content",n=>{console.log(n),a=n;let t=document.getElementById("ptag");t.innerText=n}),document.getElementById("ibox").addEventListener("input",n=>{let t=ibox.value,e=t.length,i=0,s=!0;ibox.style.background="white";for(let r=0;r<e;r++)t[r]!=a[r]?(ibox.style.background="red",s=!1):s==!0&&i++;document.querySelector(".rankWpm-self").innerText=i+" wpm"}),document.getElementById("back-btn").addEventListener("click",n=>{c.innerHTML="",window.location.href="/index.html"})});let T=document.getElementById("race-friends-btn");T.addEventListener("click",d=>{window.location.href="../pages/roomNo.html"});let L=document.getElementById("create-acc-sec");L.innerHTML=`
+  `;let a;o.emit("user enter in room",{username:"Guest"}),o.on("content",n=>{console.log(n),a=n;let t=document.getElementById("ptag");t.innerText=n}),document.getElementById("ibox").addEventListener("input",n=>{let t=ibox.value,e=t.length,i=0,s=!0;ibox.style.background="white";for(let r=0;r<e;r++)t[r]!=a[r]?(ibox.style.background="red",s=!1):s==!0&&i++;document.querySelector(".rankWpm-self").innerText=i+" wpm"}),document.getElementById("back-btn").addEventListener("click",n=>{c.innerHTML="",window.location.href="/index.html"})});let L=document.getElementById("race-friends-btn");L.addEventListener("click",d=>{window.location.href="../pages/roomNo.html"});let S=document.getElementById("create-acc-sec");S.innerHTML=`
     <div id="create-acc">
       <div id="create-acc-img">
         <img src="/images/cars-sherrif.png" alt="sherriff">
@@ -153,7 +153,7 @@ ${E()}
       </div>
       <button id="create-acc-btn">Create Your Account</button>
     </div>
-`;let S=document.getElementById("create-acc-btn");S.addEventListener("click",d=>{window.location.href="./pages/signup.html"});let x=document.getElementById("leaderboard-sec");x.innerHTML+=`
+`;let x=document.getElementById("create-acc-btn");x.addEventListener("click",d=>{window.location.href="./pages/signup.html"});let M=document.getElementById("leaderboard-sec");M.innerHTML+=`
 <div id="leaderboard">
       <h1>LEADERBOARD</h1>
       <div id="leaderboard-menu">
@@ -424,7 +424,7 @@ ${E()}
             <!-- Append -->
             </tbody>
           </table>
-  `});let M=document.getElementById("footer-sec");M.innerHTML+=`
+  `});let A=document.getElementById("footer-sec");A.innerHTML+=`
 <div id="footer">
     <div id="footer-body">
         <div id="footer-right">

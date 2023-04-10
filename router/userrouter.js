@@ -81,6 +81,33 @@ userrouter.post("/login",async(req,res)=>{
     }
 })
 
+// User Race Update Route
+userrouter.get("/updateRaceCount/:id",async(req,res)=>{
+    let user_id=req.params.id;
+    try {
+        let data=await UserModel.findByIdAndUpdate({_id:user_id},{ $inc: {'races': 1 }});
+        let user=await UserModel.findOne({_id:user_id});
+        res.status(200).send({"msg":"races updated","user":user});
+    } catch (error) {
+        console.log(error);
+        res.status(404).send({"msg":"Something went wrong!",err:error.message});
+    }
+})
+
+// User Race Update Route
+userrouter.get("/updateWPM",async(req,res)=>{
+    let {user_id,wpm}=req.query;
+    console.log(user_id,wpm)
+    try {
+        let data=await UserModel.findByIdAndUpdate({_id:user_id},{wpm: wpm});
+        let user=await UserModel.findOne({_id:user_id});
+        res.status(200).send({"msg":"wpm updated","user":user});
+    } catch (error) {
+        console.log(error);
+        res.status(404).send({"msg":"Something went wrong!",err:error.message});
+    }
+})
+
 // User Logout Route
 userrouter.get("/logout",async(req,res)=>{
     let token=req.headers.authorization;

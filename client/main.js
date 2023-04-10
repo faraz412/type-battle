@@ -30,10 +30,13 @@ document.querySelector('#navbar').innerHTML = `
   </div>
 </nav>
 `
-
 let loggedname=localStorage.getItem("loggedname");
 let loggedUser=JSON.parse(localStorage.getItem("loggedUser"));
 console.log(loggedUser)
+if(loggedname){
+  document.querySelector("#nav-wpm span").innerHTML=loggedUser.wpm;
+  document.querySelector("#nav-races span").innerHTML=loggedUser.races;
+}
 
 if(loggedname){
   document.getElementById("loggedname").innerText=loggedname;
@@ -156,15 +159,15 @@ let logo_btn = document.querySelector(".nav-logo")
  })
  
 //  -----------------------------SOCKET WORKING----------------------------------//
-function connection(){
-  let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
-  return socket;
-}
-
 // function connection(){
-//   let socket = io("http://localhost:8080/",{transports:["websocket"]});
+//   let socket = io("https://type-battle.onrender.com",{transports:["websocket"]});
 //   return socket;
 // }
+
+function connection(){
+  let socket = io("http://localhost:8080/",{transports:["websocket"]});
+  return socket;
+}
 
 export default connection;
 

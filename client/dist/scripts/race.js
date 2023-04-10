@@ -4,6 +4,9 @@ let app=document.getElementById("app");
 import connection from '../../main';
 let socket=connection();
 
+
+import baseURL from "./baseURL.js"
+
 function mainContent(){
   return `
   <div id="race-global">
@@ -73,10 +76,14 @@ ${mainContent()}
 `
 let racebody=document.getElementById("race");
 
+let loggedUser=JSON.parse(localStorage.getItem("loggedUser")) || null;
 
 //------------------RACE GLOBAL------------------------//
 let raceGlobalBtn=document.getElementById("race-global-btn");
 raceGlobalBtn.addEventListener("click",(e)=>{
+    if(loggedUser){
+        increase_Races_In_UserModel(loggedUser._id)
+    }
   racebody.innerHTML="";
   racebody.innerHTML=`
   <div class="race-cont">
@@ -131,17 +138,33 @@ raceGlobalBtn.addEventListener("click",(e)=>{
         }
         let i=0, k=1;
         for(let x in raceObj){
-            document.getElementById(`${i}`).innerText=raceObj[x]["wpm"]+" wpm";
-            let padding=((900)/checkmsg.length)*(raceObj[x]["wpm"]);
-            console.log(padding);
+            let wpm=raceObj[x]["wpm"];
+            // console.log(wpm)
+            document.getElementById(`${i}`).innerText=wpm+" wpm";
+            let padding=((900)/checkmsg.length)*(wpm);  
+            // console.log(padding);
             if(padding<900) {
                 document.getElementById(`avatar${i}`).style.paddingLeft=padding+"px";
             }else if(padding>=900){
                 document.getElementById(`rank${i}`).innerText="rank "+k;
-                alert("you got "+k+" position");
-                k++;
-                window.location="../index.html";
+                document.querySelector("#nav-wpm span").innerHTML=10;       
+                
+                if(loggedUser){               
+                    increase_wpm_In_UserModel(loggedUser._id,wpm);
+                }
+                swal({
+                    text: "you got "+k+" position",
+                    icon: "success",
+                    button: "ok",
+                    timer:1000
+                    })
+                    .then(function() {
+                    window.location.href = "../index.html"
+                });   
+                // alert("you got "+k+" position");
+                // window.location="../index.html";
                 break;
+                k++;
             }
             i++;
         }
@@ -273,3 +296,45 @@ racefriendsBtn.addEventListener("click",(e)=>{
 
 
 // console.log(outputmessage())
+
+// Updating user races count 
+async function increase_Races_In_UserModel(user_id){
+    try {
+        let url = baseURL+"/api/user/updateRaceCount/"+user_id;
+        let res = await fetch(url);
+        let data = await res.json();
+        if(res.status==200){
+            // alert(data.msg);            
+            let loggedUser= data.user;
+            let loggedname=data.user.name;
+            localStorage.setItem("loggedname",loggedname);
+            localStorage.setItem("loggedUser",JSON.stringify(loggedUser));
+        }else{
+            alert(data.msg);
+        }
+
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+// Updating user's WPM
+async function increase_wpm_In_UserModel(user_id,wpm){
+    try {
+        let url = baseURL+"/api/user/updateWPM?user_id="+user_id+"&wpm="+wpm;
+        let res = await fetch(url);
+        let data = await res.json();
+        if(res.status==200){
+            // alert(data.msg);            
+            let loggedUser= data.user;
+            let loggedname=data.user.name;
+            localStorage.setItem("loggedname",loggedname);
+            localStorage.setItem("loggedUser",JSON.stringify(loggedUser));
+        }else{
+            alert(data.msg);
+        }
+
+    } catch (error) {
+        alert(error.message);
+    }
+}

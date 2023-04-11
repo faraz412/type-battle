@@ -7,7 +7,7 @@ function userjoin(id,username,room){
         return "";
     }
     users.push(user);
-    return users;
+    return user;
 }
 function getRoomuser(room){
     return users;

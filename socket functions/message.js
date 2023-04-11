@@ -43,7 +43,10 @@ function content_check(value,user){
     ;    return [raceObj,flag];
 }
 
-
+function resetuser(user){
+    delete raceObj[user];
+    // raceObj[user]={"wpm":0};
+}
 
 
 
@@ -51,6 +54,6 @@ function content_check(value,user){
 module.exports={
     content_msg,
     formatemessage,
-    content_check
+    content_check,
+    resetuser
 }
-

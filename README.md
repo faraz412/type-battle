@@ -13,6 +13,8 @@ TypeBattle is a multiplayer online browser-based typing game. In TypeBattle, pla
 
 ## Tech Stack
 
+**Framework:** Vite
+
 **Client:** HTML, CSS, JavaScript 
 
 **Server:** Node.js, Express.js, Socket.io

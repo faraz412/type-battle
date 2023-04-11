@@ -162,14 +162,16 @@ raceGlobalBtn.addEventListener("click",(e)=>{
                     button: "ok",
                     timer:1000
                     })
-                    .then(function() {
+                    
+                    
                     window.location.href = "../index.html"
-                });   
+                    k++;
+                    break;
                 // alert("you got "+k+" position");
                 // window.location="../index.html";
-                break;
-                k++;
+                // break;
             }
+           
             i++;
         }
         // console.log(raceObj)

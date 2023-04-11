@@ -7,6 +7,8 @@ let socket=connection();
 import baseURL from "./baseURL.js"
 
 
+let loggedname=localStorage.getItem("loggedname");
+
 // Display main content
 function mainContent(){
   return `
@@ -198,7 +200,7 @@ racepracticeBtn.addEventListener("click",(e)=>{
                       <div class="progressBar">
                           <div class="avatar avatar-self">
                               <div class="nameContainer">
-                                  <div class="client-name">Guest</div>
+                                  <div class="client-name">${loggedname?loggedname:"Guest"}</div>
                                   <span class="client-label">(you)</span>
                               </div>
                               <div class="avatarContainer">
@@ -232,7 +234,7 @@ racepracticeBtn.addEventListener("click",(e)=>{
 // --------------SOCKET WORKING------------------------//
   let checkmsg;
 
-  socket.emit("user enter in room",{username:"Guest"});
+  socket.emit("user enter in room",{username:"Practice"});
   socket.on("content",(msg)=>{
     console.log(msg);
     checkmsg=msg;
@@ -260,8 +262,15 @@ racepracticeBtn.addEventListener("click",(e)=>{
         }
     }
 
+
     document.querySelector(".rankWpm-self").innerText=wpm+" wpm";
 
+        let padding=((900)/checkmsg.length)*(wpm);  
+        if(padding<900) {
+            document.querySelector(`.avatar`).style.paddingLeft=padding+"px";
+        }else if(padding>=900){
+            document.querySelector("#nav-wpm span").innerHTML=10;       
+        }
   })
 
 

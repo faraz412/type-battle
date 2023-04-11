@@ -8,7 +8,7 @@ const connection = require("./config/db")
 require("dotenv").config()
 const cors=require("cors")
 const path=require("path");
-const { content_msg, formatemessage, content_check, resetuser } = require('./socket functions/message');
+const { content_msg, formatemessage, content_check } = require('./socket functions/message');
 const { userjoin, getRoomuser, deleteuser } = require('./socket functions/user');
 app.use(cors())
 app.use(express.json())
@@ -49,12 +49,10 @@ io.on('connection', (socket) => {
         socket.join(user.room);//join the room
         socket.emit("message",formatemessage(user.username,"welcome to type battle"));// individual message
        socket.emit("number of users",getRoomuser());
-       socket.emit("roomUsers",getRoomuser());
         socket.emit("content",content_msg(user.username));
         //brodcast to other user
             // socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has join the race`))// message to all except me
             socket.broadcast.to(user.room).emit("number of users",getRoomuser());
-            io.to(user.room).emit("roomUsers",getRoomuser());
             socket.on("type message",(char)=>{
               socket.emit("status",content_check(char,user.username));
           })
@@ -66,7 +64,6 @@ io.on('connection', (socket) => {
         socket.on('disconnect', () => {
           socket.broadcast.to(user.room).emit("message",formatemessage(user.username,`${user.username} has left the race`))
           deleteuser(user.username);
-          resetuser(user.username);
           console.log('user disconnected');
         });
       }
@@ -76,7 +73,7 @@ io.on('connection', (socket) => {
     });
   });
   
-  server.listen(process.env.PORT || 1337,async () => {
+  server.listen(process.env.PORT,async () => {
     try {
         await connection
         console.log("db connection established");
